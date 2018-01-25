@@ -93,9 +93,17 @@ hr { height: 1px; color: #EAEAEA; background: #EAEAEA; font-size: 0; border: 0; 
 .info-container .info-box p { margin: 0; }
 @media (max-width: 599px) { .info-container .info-box { min-height: 100px; padding: 10px 0; }
   .info-container .info-box h2 { font-size: 3.2rem; } }
+@media (min-width: 600px) { .info-container .info-box.left-align { -webkit-box-align: start; -moz-box-align: start; -webkit-align-items: flex-start; -ms-flex-align: start; align-items: flex-start; -webkit-box-pack: start; -moz-box-pack: start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; } }
+.info-container .info-box .customer-box { margin-bottom: 1rem; }
+.info-container .info-box .note-box { display: flex; -webkit-box-pack: center; -moz-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -moz-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+.info-container .info-box .note-box p { font-size: 1.2rem; }
+@media (max-width: 599px) { .info-container .info-box .note-box p { width: 80%; } }
 
-.promo-box { display: flex; -webkit-box-pack: center; -moz-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -moz-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-direction: normal; -moz-box-direction: normal; -webkit-box-orient: vertical; -moz-box-orient: vertical; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
+.promo-box { text-align: center; display: flex; -webkit-box-pack: center; -moz-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -moz-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-direction: normal; -moz-box-direction: normal; -webkit-box-orient: vertical; -moz-box-orient: vertical; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
 .promo-box .badge { height: 50px; }
 
 .kyoo-logo > g { fill: #fff; }
 @media (max-width: 599px) { .kyoo-logo > g { fill: #FFA270; } }
+
+.color-p { color: #FF6F43; }
+.color-slight { color: #424242; }

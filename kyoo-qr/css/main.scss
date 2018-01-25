@@ -36,7 +36,7 @@ h3 { font-size: 2.8rem; line-height: 1.3; font-weight: 600;}
 h4 { font-size: 2.0rem; line-height: 1.35; font-weight: 400; color: $p; @include for-size(phone-only) {font-size: 1.6rem; font-weight: 600; } }
 h5 { font-size: 1.8rem; line-height: 1.4; font-weight: 300; }
 h6 { font-size: 1.4rem; line-height: 1.6; font-weight: 600; @include for-size(phone-only) {font-size: 1.4rem;} }
-p  { margin-top: 0; font-size: 1.4rem; font-weight: 400; }
+p  { margin-top: 0; font-size: 1.4rem; font-weight: 400;}
 
 a { 
 	color: #fff; 
@@ -188,10 +188,29 @@ hr{
 			min-height: 100px;
 			padding: 10px 0;
 		}
+		&.left-align{
+			@include for-size(tablet-portrait-up) {
+				@include align-items(flex-start); @include justify-content(flex-start)
+			}
+		}
+		.customer-box{
+			margin-bottom: 1rem;
+		}
+		.note-box{
+			display: flex;
+			@include justify-content(center);
+			@include align-items(center);
+			p{
+				font-size: 1.2rem;
+				// font-weight: 300;	
+				@include for-size(phone-only) {width: 80%}
+			}
+		}
 	}	
 }
 
 .promo-box{
+	text-align: center;
 	display: flex;
 	@include justify-content(center);
 	@include align-items(center);
@@ -206,8 +225,10 @@ hr{
 	}
 }
 
-
-
+.color{
+	&-p{color: $p;}
+	&-slight{color: $s-light}
+}
 
 
 
