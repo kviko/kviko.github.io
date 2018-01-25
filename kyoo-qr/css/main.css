@@ -106,4 +106,4 @@ hr { height: 1px; color: #EAEAEA; background: #EAEAEA; font-size: 0; border: 0; 
 @media (max-width: 599px) { .kyoo-logo > g { fill: #FFA270; } }
 
 .color-p { color: #FF6F43; }
-.color-slight { color: #424242; }
+.color-slight { color: #EAEAEA; }
