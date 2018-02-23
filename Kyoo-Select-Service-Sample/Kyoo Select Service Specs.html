@@ -1,0 +1,562 @@
+<html>
+    <head>
+        <style id="specStyle">
+            * {
+                margin: 0;
+                padding: 0;
+            }
+        body
+        {
+            line-height: 1.6em;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .headingBar {
+            height: 33px;
+            width: 100%;
+            background-color: #FFF;
+            border-bottom: 1px solid #EEE;
+        }
+        .headingText {
+            color: #5E5E5E;
+            font-family: "Helvetica Neue", "Lucida Grande", sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1em;
+            margin-left: 12px;
+            padding-top: 9px;
+        }
+        .layerRow {
+            height: 33px;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .layerRow p {
+            margin: 0;
+            padding: 8px 0 8px 12px;
+        }
+        .layerText {
+            color: #5E5E5E;
+            font-family: "Helvetica Neue", "Lucida Grande", sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1em;
+            margin-left: 12px;
+            
+        }
+        .space30 {
+            height: 30px;
+        }
+        .eventRow {
+            height: 56px;
+            width: 100%;
+            font-family: "Helvetica Neue", "Lucida Grande", sans-serif;
+            font-size: 14px;
+            
+        }
+        .eventLabel {
+            font-weight: bold;
+            margin: 42px 9px 20px 12px;
+            line-height: 3em;
+        }
+        
+        
+        .layerTransitionDetails
+        {
+            font-family: "Helvetica Neue", "Lucida Grande", sans-serif;
+            font-size: 13px;
+            margin: 0px 0px 42px 5px;
+            width: 550px;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        .layerTransitionDetails th
+        {
+            font-family: "Helvetica Neue", sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: #5E5E5E;
+            padding: 10px 8px;
+            border-bottom: 1px solid #E3E3E3;
+        }
+        .layerTransitionDetails td
+        {
+            color: #5E5E5E;
+            padding: 9px 8px 8px 8px;
+        }
+        .layerTransitionDetails tbody tr:hover td
+        {
+            /*color: #5E5E5E;*/
+        }
+        .fixedWidthCol {
+            width: 100px;
+            min-width: 100px;
+            max-width: 100px;
+        }
+        .dataCol {
+            width: 70px;
+        }
+        .easingCol {
+            width: 170px;
+        }
+        .rightAlign {
+            text-align: right;
+        }
+        .leftAlign {
+            text-align: left;
+        }
+        .centerAlign {
+            text-align: center;
+        }
+        .alternateRow {
+            background-color: #FDFDFD;
+        }
+        
+        .transitionHeader {
+            width: 550px;
+            font-family: "Helvetica Neue", sans-serif;
+            font-size: 12px;
+            color: #5E5E5E;
+            background-color: #FDFDFD;
+        }
+        .transitionHeader td {
+            color: #5E5E5E;
+            padding: 9px 8px 8px 8px;
+        }
+        .dottedUnderline {
+            border-bottom: 1px dashed #000;
+        }
+        .layerName {
+            color: #5E5E5E;
+            font-family: "Helvetica Neue", "Lucida Grande", sans-serif;
+            font-size: 14px;
+            width: 100%;
+            font-weight: 500;
+            padding: 10px 8px;
+            border-bottom: 1px solid #E3E3E3;
+            text-align: left;
+        }
+        #noAnimation {
+            margin: auto;
+            padding-top: 200px;
+            font-family: "Helvetica Neue", sans-serif;
+            font-size: 32px;
+            font-weight: 200;
+            color: #AEAEAE;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 40px;
+        }
+        
+        #footerContainer {
+            width: 100%;
+        }
+        #footer {
+            margin-left: 60%;
+            margin-bottom: 18px;
+            position: absolute;
+            display: inline;
+            float: right;
+            bottom: 0;
+            width: 500px;
+            font-family: "Helvetica Neue", sans-serif;
+            font-size: 14px;
+            padding-left: 12px;
+        }
+        label {
+            margin: 0 42px 0 4px;
+            cursor: pointer;
+        }
+        input[type="radio"] {
+            cursor: pointer;
+        }
+        
+            </style>
+        <template id="layerHeadingTemplate">
+            <div class="headingBar">
+                <p class="headingText">layer-name</p>
+            </div>
+        </template>
+        <template id="eventRowTemplate">
+            <div class="eventRow">
+                <p><span class="eventLabel">Event:</span><span id="eventName">event-name</span></p>
+            </div>
+        </template>
+        <template id="transitionHeaderTemplate">
+            <table class="transitionHeader">
+                <tbody>
+                    <tr>
+                        <td class="fixedWidthCol"></td>
+                        <td colspan="2" class="centerAlign dottedUnderline">TIME</td>
+                        <td colspan="2" class="centerAlign dottedUnderline">VALUES</td>
+                        <td class="leftAlign dottedUnderline">EASING</td>
+                    </tr>
+                    <tr>
+                        <td class="fixedWidthCol"></td>
+                        <td class="rightAlign">Start</td>
+                        <td class="centerAlign">Dur</td>
+                        <td class="centerAlign">From</td>
+                        <td class="leftAlign">To</td>
+                        <td></td>
+                        
+                    </tr>
+                    </table>
+        </template>
+        
+        <template id="layerNameTemplate">
+            <div class="layerName">Layer Name</div>
+        </template>
+        
+        <template id="animationDetails_TableRow_Template">
+            <tr>
+                <td class="fixedWidthCol">animationKey</td>
+                <td class="rightAlign dataCol">startTime</td>
+                <td class="rightAlign dataCol">duration</td>
+                <td class="rightAlign dataCol">fromValue</td>
+                <td class="rightAlign dataCol">toValue</td>
+                <td class="leftAlign easingCol">easing</td>
+            </tr>
+        </template>
+        
+        <template id="animationDetailsAlternate_TableRow_Template">
+            <tr class="alternateRow">
+                <td class="fixedWidthCol">animationKey</td>
+                <td class="rightAlign dataCol">startTime</td>
+                <td class="rightAlign dataCol">duration</td>
+                <td class="rightAlign dataCol">fromValue</td>
+                <td class="rightAlign dataCol">toValue</td>
+                <td class="leftAlign easingCol">easing</td>
+            </tr>
+        </template>
+        <template id="noAnimationDataFoundTemplate">
+            <div id="noAnimation">
+                No animation data to display
+            </div>
+        </template>
+    </head>
+    <body>
+        <iframe src="Kyoo Select Service.html" width="60%" height="100%" frameborder=0></iframe>
+        <iframe id="specsFrame"  width="39%" height="100%" frameborder=0></iframe>
+        <div id="footerContainer">
+            <div id="footer">
+                <b>Color format</b>
+                <form action="">
+                    <input type="radio" name="colorFormat" id="appleSDKOption" value="appleSDK" onclick="setColorFormat(colorFormatApple)" checked>
+                        <label for="appleSDKOption">Apple SDK</label>
+                        <input type="radio" name="colorFormat" id="androidSDKOption" value="androidSDK" onclick="setColorFormat(colorFormatAndroid)">
+                            <label for="androidSDKOption">Android SDK</label>
+                            <input type="radio" name="colorFormat" id="webOption" value="web" onclick="setColorFormat(colorFormatWeb)">
+                                <label for="webOption">Web</label>
+                                </form>
+            </div>
+        </div>
+    </body>
+    <script>
+        var colorFormatApple = 0;
+        var colorFormatAndroid = 1;
+        var colorFormatWeb = 2;
+        
+        var colorFormatForSpecs = colorFormatApple;
+        var currentScreen = null;
+        
+        //Listen to the 'showSpecs' event from reverse.html's showScreenAtIndex function
+        function receiveMessage(event) {
+            var data = event.data;
+            if(typeof(window[data.func]) == "function"){
+                window[data.func].call(null, data.params[0]);
+            }
+        }
+    
+    function setColorFormat(theColorFormat) {
+        colorFormatForSpecs = theColorFormat;
+        console.log('changed format to: ' + colorFormatForSpecs);
+        showSpecs(currentScreen);
+    }
+    
+    addEventListener("message", receiveMessage, false);
+    
+    function showSpecs(screen){
+        currentScreen = screen;
+        //console.log(screen);
+        var specStyle = document.querySelector('#specStyle');
+        var specStyleXML = new XMLSerializer().serializeToString(specStyle);
+        
+        //Build the HTML for the specsFrame iframe in steps.
+        //First, build the css and header
+        var htmlToShow = '<html><head>' + specStyleXML + '</head><body>';
+        
+        //insert the details for the screens
+        for (var layer of screen.layers) {
+            if (layer.screenTransitions) {
+                htmlToShow += layerHeadingHTML(layer);
+                
+                for (var screenTransition of layer.screenTransitions) {
+                    htmlToShow += eventRowHTML(screenTransition);
+                    htmlToShow += transitionHeaderHTML();
+                    var timeline = timelineToUseInScreenTransition(screenTransition);
+                    
+                    htmlToShow += animationHTML(timeline);
+                }
+            }
+        }
+        
+        if (noAnimationDataFound()) {
+            insertNoAnimationDataString();
+        }
+        
+        // htmlToShow += footerHTML();
+        
+        //close off the html tags
+        htmlToShow += '</body></html>';
+        
+        //set the srcdoc for the specs iframe from the constructed data
+        var specsFrame = objectForId('#specsFrame');
+        specsFrame.srcdoc = htmlToShow;
+        // console.log(htmlToShow);
+        
+        
+        
+        
+        
+        //NO ANIMATION DATA HANDLER
+        function noAnimationDataFound() {
+            return (htmlToShow.endsWith('<body>'));
+        }
+        function insertNoAnimationDataString() {
+            var template = templateForId('#noAnimationDataFoundTemplate');
+            htmlToShow += template.stringRepresentation();
+        }
+        
+        
+        
+        //SPEC CONSTRUCTION
+        function layerHeadingHTML(layer) {
+            var template = templateForId('#layerHeadingTemplate');
+            template.injectContentForTag(layer.name, "p");
+            return template.stringRepresentation();
+        }
+        
+        function eventRowHTML(screenTransition) {
+            var template = templateForId('#eventRowTemplate');
+            template.injectContentForTag(screenTransition.action, "#eventName");
+            return template.stringRepresentation();
+        }
+        
+        function transitionHeaderHTML() {
+            var template = templateForId('#transitionHeaderTemplate');
+            return template.stringRepresentation();
+        }
+        
+        function footerHTML() {
+            var template = templateForId('#footerTemplate');
+            return template.stringRepresentation();
+        }
+        
+        function timelineToUseInScreenTransition(screenTransition) {
+            var timelineToUse = activeTimelineInScreenTransition(screenTransition);
+            
+            if (screenTransition.animation == "Reverse") {
+                reverseTimeline(timelineToUse);
+            }
+            
+            return timelineToUse;
+        }
+        
+        function activeTimelineInScreenTransition(screenTransition) {
+            for (var timeline of screenTransition.timelines) {
+                if (timeline.active) {
+                    return timeline;
+                }
+            }
+            return null;
+        }
+        
+        function reverseTimeline(timelineToUse) {
+            for (var timelineLayer of timelineToUse.timelineLayers) {
+                for (var animationBand of timelineLayer.animationBands) {
+                    animationBand.transitions = animationBand.transitions.reverse();
+                }
+            }
+            
+            for (var timelineLayer of timelineToUse.timelineLayers) {
+                for (var animationBand of timelineLayer.animationBands) {
+                    for (var transition of animationBand.transitions) {
+                        var fromKey = transition.keyframes[0];
+                        var toKey = transition.keyframes[1];
+                        
+                        var fromTime = fromKey.time;
+                        fromKey.time = timelineToUse.duration - (toKey.time);
+                        toKey.time = timelineToUse.duration - fromTime;
+                        var fromValue = fromKey.parsedValue;
+                        fromKey.parsedValue = toKey.parsedValue;
+                        toKey.parsedValue = fromValue;
+                    }
+                }
+            }
+            
+        }
+        
+        function animationHTML(timeline) {
+            var result = '';
+            for (var timelineLayer of timeline.timelineLayers) {
+                if (timelineLayer["animationBands"]) {
+                    if (timelineLayer.animationBands.length == 0) {
+                        continue;
+                    }
+                }
+                var tlTemplate = templateForId('#layerNameTemplate');
+                tlTemplate.injectContentForTag(timelineLayer.guid, "div");
+                result += tlTemplate.stringRepresentation();
+                result += '<table class="layerTransitionDetails">';
+                result += '<tbody>';
+                
+                var isAlternateRow = false;
+                for (var animationBand of timelineLayer.animationBands) {
+                    for (var transition of animationBand.transitions) {
+                        var templateIdToUse = isAlternateRow ? '#animationDetailsAlternate_TableRow_Template' : '#animationDetails_TableRow_Template' ;
+                        isAlternateRow = !isAlternateRow;
+                        
+                        var detailsTemplate = templateForId(templateIdToUse);
+                        var fromKey = transition.keyframes[0];
+                        var toKey = transition.keyframes[1];
+                        var duration = toKey.time - fromKey.time;
+                        detailsTemplate.injectContentForTagAtIndex(animationBand.animationKey, 'td', 0);
+                        detailsTemplate.injectContentForTagAtIndex(roundToTwo(fromKey.time), 'td', 1);
+                        detailsTemplate.injectContentForTagAtIndex(roundToTwo(duration), 'td', 2);
+                        if (typeof fromKey.parsedValue == 'string') {
+                            //must be a color
+                            var strFromColor = cleanStringForColorString(fromKey.parsedValue);
+                            detailsTemplate.injectContentForTagAtIndex(strFromColor, 'td', 3);
+                            var strToColor = cleanStringForColorString(toKey.parsedValue);
+                            detailsTemplate.injectContentForTagAtIndex(strToColor, 'td', 4);
+                        }
+                        else {
+                            detailsTemplate.injectContentForTagAtIndex(roundToTwo(fromKey.parsedValue), 'td', 3);
+                            detailsTemplate.injectContentForTagAtIndex(roundToTwo(toKey.parsedValue), 'td', 4);
+                        }
+                        detailsTemplate.injectContentForTagAtIndex(cleanEasingForGSAPEase(transition.gsapEase), 'td', 5);
+                        result += detailsTemplate.stringRepresentation();
+                    }
+                }
+                result+= '</tbody></table>';
+            }
+            
+            
+            return result;
+        }
+        
+        
+        
+        //SUPPORT FUNCTIONS
+        function cleanStringForColorString(colorString) {
+            var colors = colorsArrayFromRGBAString(colorString);
+            switch (colorFormatForSpecs) {
+                case colorFormatApple:
+                return stringForAppleSDKFormat(colors);
+                break;
+                case colorFormatAndroid:
+                return stringForAndroidSDKFormat(colors);
+                break;
+                default:
+                return stringForWebFormat(colors);
+            }
+        }
+        function colorsArrayFromRGBAString(rgbaString) {
+            var colorString = rgbaString;
+            colorString = colorString.replace('rgba(', '');
+            colorString = colorString.replace(')', '');
+            
+            var colorParts = colorString.split(',');
+            
+            colorParts[0] = roundToTwo(parseFloat(colorParts[0]));
+            colorParts[1] = roundToTwo(parseFloat(colorParts[1]));
+            colorParts[2] = roundToTwo(parseFloat(colorParts[2]));
+            colorParts[3] = roundToTwo(parseFloat(colorParts[3]));
+            
+            return colorParts;
+        }
+        function stringForAppleSDKFormat(colors) {
+            var strFromColor;
+            strFromColor = "R: " + roundToTwo(colors[0]/255) + "<br>";
+            strFromColor += "G: " + roundToTwo(colors[1]/255) + "<br>";
+            strFromColor += "B: " + roundToTwo(colors[2]/255) + "<br>";
+            strFromColor += "A: " + roundToTwo(colors[3]);
+            return strFromColor;
+        }
+        function stringForAndroidSDKFormat(colors) {
+            return '0x' + toHex(colors[3]) + hexForRGB(colors);
+        }
+        function stringForWebFormat(colors) {
+            return '#' + hexForRGB(colors) + '<br>Alpha: ' + colors[3];
+        }
+        function hexForRGB(colors) {
+            return toHex(colors[0])+toHex(colors[1])+toHex(colors[2]);
+        }
+        function toHex(n) {
+            n = parseInt(n,10);
+            if (isNaN(n)) return "00";
+            n = Math.max(0,Math.min(n,255));
+            return "0123456789ABCDEF".charAt((n-n%16)/16)
+            + "0123456789ABCDEF".charAt(n%16);
+        }
+        
+        function roundToTwo(num) {
+            return +(Math.round(num + "e+2")  + "e-2");
+        }
+        function objectForId(theId) {
+            return document.querySelector(theId);
+        }
+        function templateForId(theId) {
+            var template = document.querySelector(theId);
+            template.injectContentForTag = function(contentToInject, theTag) {
+                // var tag = this.content.querySelector(theTag);
+                // tag.textContent = contentToInject;
+                this.injectContentForTagAtIndex(contentToInject, theTag, 0);
+            }
+            template.injectContentForTagAtIndex = function(contentToInject, theTag, index) {
+                var tag = this.content.querySelectorAll(theTag);
+                // tag[index].textContent = contentToInject;
+                tag[index].innerHTML = contentToInject;
+            }
+            template.stringRepresentation = function() {
+                return (new XMLSerializer().serializeToString(template.content));
+            }
+            template.objectForTag = function(theTag) {
+                return this.content.querySelector(theTag);
+            }
+            return template;
+        }
+        function cleanEasingForGSAPEase(gsapEase) {
+            if (gsapEase.startsWith('Linear')) {
+                return 'Linear';
+            }
+            if (gsapEase.startsWith('spring')) {
+                return gsapEase;
+            }
+            
+            //strip out gsap commands
+            var cleanValue = gsapEase.replace("CustomEase.create('','", "");
+            cleanValue = cleanValue.replace("')", "");
+            //get individual components
+            var components = cleanValue.split(',');
+            
+            //reconstruct it (coz otherwise 0.25, will be printed as 0.2500000)
+            var reconstructedValue = '';
+            for (var i=0, len=components.length; i<len; i++) {
+                //eval each component and convert back to a string
+                //eval will make 0.250000 into 0.25
+                reconstructedValue += eval(components[i]);
+                if (i<len-1)
+                reconstructedValue+= ', '; //don't want comma for last component
+            }
+            
+            return reconstructedValue;
+            
+        }
+        
+    }
+    
+        </script>
+</html>
