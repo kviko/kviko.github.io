@@ -37,6 +37,7 @@ h4 { font-size: 2.0rem; line-height: 1.35; font-weight: 400; color: $p; @include
 h5 { font-size: 1.8rem; line-height: 1.4; font-weight: 300; }
 h6 { font-size: 1.4rem; line-height: 1.6; font-weight: 600; @include for-size(phone-only) {font-size: 1.4rem;} }
 p  { margin-top: 0; font-size: 1.4rem; font-weight: 400;}
+.caption{color: rgba(#000, 0.4); font-size: 1.2rem; font-weight: 600;}
 
 a { 
 	color: #fff; 
@@ -131,7 +132,7 @@ hr{
 		flex-grow: 2;
 		@include justify-content(center);
 		@include align-items(center);
-		img{ max-height: 100px; }
+		img{ max-height: 100px; max-width: 150px;}
 		@include for-size(phone-only) {
 			img{ max-height: 80px; }
 		}
@@ -212,7 +213,7 @@ hr{
 .promo-box{
 	text-align: center;
 	display: flex;
-	@include justify-content(center);
+	@include justify-content(center);  
 	@include align-items(center);
 	@include flex-direction(column);
 	.badge{ height: 50px; }
@@ -231,11 +232,68 @@ hr{
 }
 
 
+.table-box{
+	@include for-size(phone-only) {margin: 0 10px;}
+	@include box-shadow(0, 2px, 16px, 0, rgba(#000, 0.1));
+	@include border-radius(1em);
+}
+.table{
+	width: 100%;
+    display: table;
+    border-collapse: collapse;
+	border-radius: 1em;
+	overflow: hidden;
+    margin-bottom: 2em;
+    tr {
+		height: 3.5em;
+    	&:nth-child(even) { background-color: rgba(#000, 0.02);}
+    }
 
+	.table-head{
+		display: table-header-group;
+	    vertical-align: middle;
+	    border-color: inherit;
+	    background-color: rgba($p, 0.3);
+		font-size: 1.5rem;
+		tr{
+			height: 2.5em;
+			th{font-weight: 600;}
+		}
+	}
 
+	.table-body{
+		display: table-row-group;
+	    vertical-align: middle;
+	    border-color: inherit;
+	    @extend h6;
+	    font-weight: 400;
+	    line-height: 1.2em;
+	}
+}
 
+button{
+	border: 0;
+	height: 50px;
+	display: flex;
+	@include justify-content(center);
+	@include align-items(center);
+	@extend h6;
+	color: #FFF;
+	padding: 0 30px;
+	&.button-active{
+		@include gradient-bg($p-light, $p);
+		@include border-radius(100px);
+		@include box-shadow(0, 4px, 16px, 0, rgba($p, 0.4));
+	}
+}
 
-
+.numberbtn-box{
+	display: flex;
+	@include justify-content(flex-start);
+	@include align-items(center);
+	@include flex-direction(column);
+	margin-bottom: 2em;
+}
 
 
 
