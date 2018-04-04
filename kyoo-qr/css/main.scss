@@ -1,18 +1,29 @@
-@import 'color', 'mixins';
+@import '_color', '_mixins';
 
 html, body{
 	height: 100%;
-	font-family: "Poppins", helvetica, arial, serif;
+	font-family: "Poppins", helvetica, arial, serif !important;
 	box-sizing: border-box;
 	// Gradient
 	@include for-size(tablet-portrait-up) {
-		background: $p;  /* fallback for old browsers */
-		@include gradient-bg($p, $p-light);
+		body {
+			background: $p;  /* fallback for old browsers */
+			@include gradient-bg($p, $p-light);
+		}
+	}
+	.kyoo-bg{
+		@include for-size(tablet-portrait-up) {
+			background: url(../assets/kyoo_bg.png) no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
 	}
 }
 
 html{ font-size: 62.5%; }
-body{ font-size: 1.4em; line-height: 1.6; font-weight: 400; color: #222; 
+body{ font-size: 1.4em; line-height: 1.6; font-weight: 400; color: #222;
 	@include for-size(phone-only) {
 		font-size: 1.2em; line-height: 1.4; text-align: center;
 	}
@@ -39,10 +50,10 @@ h6 { font-size: 1.4rem; line-height: 1.6; font-weight: 600; @include for-size(ph
 p  { margin-top: 0; font-size: 1.4rem; font-weight: 400;}
 .caption{color: rgba(#000, 0.4); font-size: 1.2rem; font-weight: 600;}
 
-a { 
-	color: #fff; 
+a {
+	color: #fff;
 	font-weight: 600;
-	text-decoration: none; 
+	text-decoration: none;
 
 	&:hover{ font-weight: 700; cursor: pointer;}
 }
@@ -63,7 +74,7 @@ a {
 		background-color: #fff;
 		min-width: 320px;
 		@include for-size(phone-only) {
-			width: 100%; 
+			width: 100%;
 			padding: 16px 0;
 		}
 
@@ -74,7 +85,7 @@ a {
 			margin-top: 6rem;
 			min-width: 540px;
 			max-width: 600px;
-			width: 60%; 
+			width: 60%;
 			padding: 40px 30px;
 		}
 	}
@@ -84,12 +95,12 @@ a {
 		@include justify-content(center);
 		@include align-items(center);
 		@include flex-direction(column);
-		& :first-child{ margin-bottom: 0px; }
-		p{ font-size: 1.0rem; font-weight: 300; text-align: center;}
-		img{ margin-bottom: 0.3rem; }
+		// & :first-child{ margin-bottom: 0px; }
+		p{ font-size: 1.2rem; font-weight: 300; text-align: center; margin-bottom: 0px;}
+		svg{ margin-bottom: 0.6rem; }
 		@include for-size(phone-only) {
 			color: $s;
-			margin-top: 3rem;
+			margin-top: 1rem;
 		}
 	}
 }
@@ -149,6 +160,29 @@ hr{
 	}
 }
 
+.merchant-box-2{
+	margin-bottom: 1rem;
+	display: flex;
+	@include justify-content(flex-start);
+	@include align-items(center);
+	@include flex-direction(column);
+	& :first-child{ margin-bottom: 10px; }
+	@include for-size(phone-only) {
+		margin-bottom: 1.4rem;
+		& #logo-box:first-child{ margin-right: 0px; margin-bottom: 1rem; }
+	}
+	#logo-box{
+		display: flex;
+		@include justify-content(center);
+		@include align-items(center);
+		img{ max-height: 100px; max-width: 100px;}
+		@include for-size(phone-only) {
+			img{ max-height: 80px; }
+		}
+	}
+	.business_name{font-weight: 700}
+}
+
 .box-line{
 	border: 1px solid #EAEAEA;
 	@include border-radius(6px);
@@ -203,26 +237,29 @@ hr{
 			@include align-items(center);
 			p{
 				font-size: 1.2rem;
-				// font-weight: 300;	
+				// font-weight: 300;
 				@include for-size(phone-only) {width: 80%}
 			}
 		}
-	}	
+	}
 }
 
 .promo-box{
 	text-align: center;
 	display: flex;
-	@include justify-content(center);  
+	@include justify-content(center);
 	@include align-items(center);
 	@include flex-direction(column);
 	.badge{ height: 50px; }
 }
 
-.kyoo-logo > g {
-	fill: #fff;
-	@include for-size(phone-only) {
-		fill: $p-light;	
+.kyoo-logo {
+	margin: 4px 0; 
+	> g {
+		fill: #fff;
+		@include for-size(phone-only) {
+			fill: $p-light;
+		}
 	}
 }
 
@@ -271,20 +308,130 @@ hr{
 	}
 }
 
-button{
+.center-box{
+	// width: 300px;
+	display: flex;
+	@include justify-content(center);
+	@include align-items(center);
+	@include flex-direction(column);
+}
+
+.short-container{
+	width: 400px;
+	display: flex;
+	@include justify-content(center);
+	@include align-items(center);
+	@include flex-direction(column);
+}
+
+
+// TEXTBOXES
+.text-box{
+	display: flex;
+	@include justify-content(flex-start);
+	@include align-items(center);
+	width: 100%;
+	min-width: 350px;
+	height: 50px;
+	padding: 0 16px;
+	margin-bottom: 1.3rem;
+	@include border-radius(4px);
+	@include border(#CCC, 1px);
+	-webkit-box-shadow: inset 0 1px 0 0 #ECECEC;
+	-moz-box-shadow: inset 0 1px 0 0 #ECECEC;
+	box-shadow: inset 0 1px 0 0 #ECECEC;
+	.text-icon{fill: $s; flex-grow: 0; width: 16px; height: 16px; margin-right: 16px;}
+	&:focus-within{
+		@include border($p-light, 1px);
+		.text-icon{fill: $p-light; transition: all .1s;}
+	}
+	&.error{
+		@include border(red, 1px);
+		.text-icon{fill: red; transition: all .1s;}
+		&:focus-within{
+			.text-icon{fill: $p-light; transition: all .1s;}
+		}
+	}
+}
+.error-text{
+	font-weight: 600;
+	color: red;
+	font-size: 1.2rem;
+	transition: all .1s;
+	&.hidden{display: none;}
+}
+
+// Float Labels
+.has-float-label {
+	flex-grow: 1;
+	height: 50px;
+	cursor: text;
+	@include float-label-container;
+	@include float-label;
+	select {
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	}
+	input, select {
+		@include float-label-input;
+		width: 100%;
+		font-size: inherit;
+		font-family: inherit;
+		padding-top: 1em;
+		margin-top: 6px;
+		border: 0;
+		border-radius: 0;
+		// border-bottom: 2px solid rgba(0,0,0,.1);
+		@include float-label-scaled {
+		  top: 1em;
+		  color: $s-light;
+		}
+		&:focus {
+		  outline: none;
+		  border-color: rgba(0,0,0,.5);
+		}
+	}
+
+	select {
+		padding-right: 1em;
+		background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right .5em bottom .25em;
+		background-size: 8px 10px;
+	}
+}
+// End float labels
+
+
+button, .button{
+	&:hover{cursor: pointer;}
 	border: 0;
 	height: 50px;
 	display: flex;
 	@include justify-content(center);
 	@include align-items(center);
-	@extend h6;
+	@extend h5;
+	font-weight: 600;
 	color: #FFF;
 	padding: 0 30px;
+	width: 100%;
+	@include border-radius(6px);
+	&.button-primary{
+		background-color: $p;
+		@include box-shadow(0, 4px, 16px, 0, rgba($p, 0.4));
+		&:hover{
+			background-color: $p-light;
+			@include box-shadow(0, 6px, 20px, 2px, rgba($p, 0.6));
+		}
+	}
 	&.button-active{
 		@include gradient-bg($p-light, $p);
-		@include border-radius(100px);
 		@include box-shadow(0, 4px, 16px, 0, rgba($p, 0.4));
 	}
+	&.large{height: 60px;}
+}
+
+.form-box{
+	button{margin: 2rem 0 3rem;}
 }
 
 .numberbtn-box{
@@ -294,45 +441,6 @@ button{
 	@include flex-direction(column);
 	margin-bottom: 2em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
