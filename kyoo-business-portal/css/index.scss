@@ -420,7 +420,7 @@ h5.box-title{
 		width: 30%;
 		margin-bottom: 1rem;
 		@include for-size(phone-only) { 
-			width: 40%;
+			width: 45%;
 		}
 	}
 	.txt-answer {
@@ -428,8 +428,8 @@ h5.box-title{
 		color: $grey-1;
 		width: 70%;
 		@include for-size(phone-only) { 
-			width: 60%;
-			padding-left: 10px;
+			width: 55%;
+			// padding-left: 10px;
 		}
 	}	
 }
