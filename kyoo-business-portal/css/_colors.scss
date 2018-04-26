@@ -1,0 +1,32 @@
+/* COLORS */
+// ------------------------------------------
+// Greyscale
+$black: 			#222; 		// rgba(0,0,0,1);
+$grey-1:			#292929;	// rgba(0,0,0,0.84);	
+$grey-2: 			#7F7F7F;	// rgba(0,0,0,0.50);
+$grey-3:			#C2C2C2;	// rgba(0,0,0,0.24);
+$grey-4: 			#D6D6D6;	// rgba(0,0,0,0.16);
+$grey-5:			#F0F0F0;	// rgba(0,0,0,0.06);
+$grey-6: 			#FAFAFA;	// rgba(0,0,0,0.02);	
+$white:				#FFF;		// rgba(255,255,255,1);	
+
+// Brand Colors
+$primary: 			#FF6F43;
+$primary-light: 	#FFA465;
+$primary-dark:		#FF5F0F;
+
+$secondary:			#303030;
+$secondary-light:	#424242;
+$secondary-dark:	#212121;
+
+// Sub Colors
+$green:				#28A745;	$green-light: lighten($green, 5%);		$green-dark: darken($green, 5%);
+$red:				#DC3545;	$red-light: lighten($red, 6%);			$red-dark: darken($red, 5%);
+$yellow:			#FFC107;	$yellow-light: lighten($yellow, 6%);	$yellow-dark: darken($yellow, 5%);
+$blue:				#007BFF;	$blue-light: lighten($blue, 6%);		$blue-dark: darken($blue, 5%);
+$bleen:				#17A2B8;	$bleen-light: lighten($bleen, 6%);		$bleen-dark: darken($bleen, 5%);
+
+// Element Colors
+$mainBG:			#F6F7FB;
+$txtMain:			$grey-1;
+$txtSub: 			$grey-4;
