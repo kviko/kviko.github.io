@@ -315,6 +315,9 @@ body{
 		.button-box { margin-left: 0;}
 	}
 }
+h5.box-title{
+	@include for-size(tablet-landscape-down) { font-size: 1.6rem; }
+}
 .button-box{
 	margin-left: 16px;
 	&:first-child { margin-left: 0; }
@@ -434,6 +437,7 @@ body{
 	max-height: 350px;
 	position: relative;
 	.device-container {
+		margin-top: 2rem;
 		height: 300px;
 		overflow: scroll;
 		-webkit-overflow-scrolling: touch;

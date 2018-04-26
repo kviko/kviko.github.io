@@ -93,7 +93,8 @@ body {
 	line-height: 1.6; 
 	font-weight: 400;
 	@include for-size(phone-only) {
-		font-size: 1.4em; line-height: 1.4; text-align: center;
+		font-size: 1.4em; line-height: 1.4; 
+		// text-align: center;
 	}
 }
 * {
