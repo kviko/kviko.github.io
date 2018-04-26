@@ -446,10 +446,11 @@ body{
 	@include justify-content(space-between);
 	@include align-items(center); 
 	.device-img { width: 52px; height: 52px; }
+	.device-model { padding-right: 1rem; }
 	.device-left{
 		@include flexbox;;
 		@include align-items(center); 
-		#device-id { font-weight: 500; }
+		.device-id { font-weight: 500;}
 		& > * {
 			padding-left: 16px;
 			&:first-child { padding-left: 0; }	

@@ -328,7 +328,8 @@ body { color: #292929; background: #F6F7FB; }
 
 .device-box { height: 52px; margin-bottom: 1.6rem; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-box-pack: justify; -moz-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -moz-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 .device-box .device-img { width: 52px; height: 52px; }
+.device-box .device-model { padding-right: 1rem; }
 .device-box .device-left { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-box-align: center; -moz-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
-.device-box .device-left #device-id { font-weight: 500; }
+.device-box .device-left .device-id { font-weight: 500; }
 .device-box .device-left > * { padding-left: 16px; }
 .device-box .device-left > *:first-child { padding-left: 0; }
