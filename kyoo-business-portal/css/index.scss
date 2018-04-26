@@ -49,6 +49,7 @@ body{
 			grid-row: main-start / -1;
 			padding: 20px 30px;
 			overflow: scroll;
+			-webkit-overflow-scrolling: touch;
 			position: relative;
 			@include for-size(phone-only) {
 				padding: 10px 0px;
@@ -82,6 +83,7 @@ body{
 			grid-row: main-start / main-end;
 			padding: 30px 50px;
 			overflow: scroll;
+			-webkit-overflow-scrolling: touch;
 			position: relative;
 		}
 	} 
@@ -434,6 +436,7 @@ body{
 	.device-container {
 		height: 300px;
 		overflow: scroll;
+		-webkit-overflow-scrolling: touch;
 	}
 }
 .device-box{
