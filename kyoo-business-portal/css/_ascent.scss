@@ -244,14 +244,7 @@ h5 { font-size: 2.0rem; line-height: 1.4; 	font-weight: 600; }
 h6 { font-size: 1.6rem; line-height: 1.6; 	font-weight: 600; }
 p  { font-size: 1.4rem; font-weight: 400;	margin-top: 0; }
 small{ font-size: 1.2rem; line-height: 1.6;	font-weight: 300; color: $txtSub;}
-.mainBox.scoreboard{
-	text-align: center; 
-	padding: 20px 0; 
-	& > .score-title {
-		margin-bottom: 0.8rem;
-	} 
-}
-.score{ font-size: 5.6rem; line-height: 1.2; font-weight: 700; }
+
 
 // Tablet landscape Size - max-width: 899px
 @include for-size(tablet-landscape-down) {
@@ -264,9 +257,7 @@ small{ font-size: 1.2rem; line-height: 1.6;	font-weight: 300; color: $txtSub;}
   h4 { font-size: 1.6rem; }
   h5 { font-size: 1.4rem; }
   h6 { font-size: 1.2rem; }
-  .score{ font-size: 4.0rem; }
 }
-
 
 /* LINKS & BREADCRUMBS */
 // ------------------------------------------

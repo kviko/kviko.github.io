@@ -124,19 +124,13 @@ p { font-size: 1.4rem; font-weight: 400; margin-top: 0; }
 
 small { font-size: 1.2rem; line-height: 1.6; font-weight: 300; color: #D6D6D6; }
 
-.mainBox.scoreboard { text-align: center; padding: 20px 0; }
-.mainBox.scoreboard > .score-title { margin-bottom: 0.8rem; }
-
-.score { font-size: 5.6rem; line-height: 1.2; font-weight: 700; }
-
 @media (max-width: 899px) and (min-width: 1px) { h1 { font-size: 3.2rem; }
   h1.large { font-size: 8.2rem; }
   h2 { font-size: 2.8rem; }
   h3 { font-size: 2.4rem; }
   h4 { font-size: 1.6rem; }
   h5 { font-size: 1.4rem; }
-  h6 { font-size: 1.2rem; }
-  .score { font-size: 4.0rem; } }
+  h6 { font-size: 1.2rem; } }
 /* LINKS & BREADCRUMBS */
 a { color: #FFA465; font-weight: inherit; text-decoration: none; }
 a:hover { color: #FF6F43; cursor: pointer; }
@@ -306,6 +300,11 @@ body { color: #292929; background: #F6F7FB; }
   .account-box .account-detail-box { min-height: 482px; }
   .account-box .account-right { min-width: 350px; } }
 @media (max-width: 1199px) and (min-width: 1px) { .account-box { grid-gap: 0rem; } }
+
+.mainBox.scoreboard { text-align: center; padding: 20px 20px; }
+.mainBox.scoreboard > .score-title { margin-bottom: 0.8rem; }
+.mainBox.scoreboard .score { font-size: 5.6rem; line-height: 1.2; font-weight: 700; }
+@media (max-width: 899px) and (min-width: 1px) { .mainBox.scoreboard .score { font-size: 4.0rem; } }
 
 .account-detail-box .account-logo { border: 1px solid #F0F0F0; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; margin: 2rem auto 3rem; }
 @media (min-width: 1800px) { .account-detail-box .account-logo { height: 160px; width: 160px; } }

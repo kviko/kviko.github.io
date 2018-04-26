@@ -366,6 +366,22 @@ body{
 	}
 	@include for-size(desktop-down) { grid-gap: 0rem; }
 }
+
+.mainBox.scoreboard{
+	text-align: center; 
+	padding: 20px 20px; 
+	& > .score-title {
+		margin-bottom: 0.8rem;
+	} 
+	.score{
+		font-size: 5.6rem;
+		line-height: 1.2; 
+		font-weight: 700; 
+		@include for-size(tablet-landscape-down) { font-size: 4.0rem; }
+	}
+}
+
+
 .account-detail-box{
 	.account-logo{
 		@include border($grey-5, 1px);
