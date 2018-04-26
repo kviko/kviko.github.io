@@ -429,6 +429,7 @@ h5.box-title{
 		width: 70%;
 		@include for-size(phone-only) { 
 			width: 60%;
+			padding-left: 10px;
 		}
 	}	
 }
