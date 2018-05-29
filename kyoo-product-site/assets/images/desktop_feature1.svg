@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="348px" viewBox="0 0 200 348" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 14</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="200" height="348" rx="3"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.0-Web-Home-Page" transform="translate(-168.000000, -2006.000000)">
+            <g id="Section-3---Features" transform="translate(0.000000, 1669.000000)">
+                <g id="V1-Model" transform="translate(56.000000, 129.000000)">
+                    <g id="Group-14" transform="translate(112.000000, 208.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                        <g id="1-Create-Queues" mask="url(#mask-2)">
+                            <g transform="translate(0.000000, 10.000000)">
+                                <rect id="Rectangle-12" stroke="#FFEADC" stroke-width="2" fill="#FFF6F3" x="69" y="1" width="66" height="48" rx="6"></rect>
+                                <rect id="Rectangle-12-Copy" stroke="#FFEADC" stroke-width="2" fill="#FFF6F3" x="136" y="1" width="66" height="48" rx="6"></rect>
+                                <path d="M1,336.5 L199,336.5 L199,47 L67,47 L67,6 C67,3.23857625 64.7614237,1 62,1 L6,1 C3.23857625,1 1,3.23857625 1,6 L1,336.5 Z" id="Combined-Shape" stroke="#FFEADC" stroke-width="2" fill="#FFF6F3"></path>
+                                <g id="Queue-Number" stroke="none" stroke-width="1" fill="none">
+                                    <g id="Queue-number-">
+                                        <path d="M6,0 L62,-8.8817842e-16 C65.3137085,-1.4968968e-15 68,2.6862915 68,6 L68,47 L0,47 L0,6 C-4.05812251e-16,2.6862915 2.6862915,6.08718376e-16 6,0 Z" id="Rectangle-12-Copy-2" fill="#FFA465"></path>
+                                        <text id="Q1" font-family="Roboto-Bold, Roboto" font-size="28" font-weight="bold" fill="#FFFFFF">
+                                            <tspan x="16.1171875" y="34">Q1</tspan>
+                                        </text>
+                                    </g>
+                                </g>
+                                <g id="Group-4" stroke="none" stroke-width="1" fill="none" transform="translate(22.000000, 80.000000)">
+                                    <g id="Group-3">
+                                        <rect id="Rectangle-5" fill="#FFB58D" x="0" y="0" width="20.8" height="21"></rect>
+                                        <rect id="Rectangle-5-Copy" fill="#FF6F43" x="109.672727" y="0" width="20.8" height="21" rx="6"></rect>
+                                        <rect id="Rectangle-5-Copy-3" fill="#FF6F43" x="135.2" y="0" width="20.8" height="21" rx="6"></rect>
+                                        <g id="Group" transform="translate(24.581818, 0.000000)" fill="#FFD5BE">
+                                            <rect id="Text" x="0" y="0" width="81.3090909" height="7.14893617"></rect>
+                                            <rect id="Text-Small" x="0" y="10.2765957" width="81.3090909" height="3.57446809"></rect>
+                                            <rect id="Text-Small-Copy-2" x="0" y="17.4255319" width="81.3090909" height="3.57446809"></rect>
+                                        </g>
+                                    </g>
+                                    <g id="Group-3-Copy" transform="translate(0.000000, 41.000000)">
+                                        <rect id="Rectangle-5" fill="#FFB58D" x="0" y="0" width="20.8" height="21"></rect>
+                                        <rect id="Rectangle-5-Copy" fill="#FF6F43" x="109.672727" y="0" width="20.8" height="21" rx="6"></rect>
+                                        <rect id="Rectangle-5-Copy-3" fill="#FF6F43" x="135.2" y="0" width="20.8" height="21" rx="6"></rect>
+                                        <g id="Group" transform="translate(24.581818, 0.000000)" fill="#FFD5BE">
+                                            <rect id="Text" x="0" y="0" width="81.3090909" height="7.14893617"></rect>
+                                            <rect id="Text-Small" x="0" y="10.2765957" width="81.3090909" height="3.57446809"></rect>
+                                            <rect id="Text-Small-Copy-2" x="0" y="17.4255319" width="81.3090909" height="3.57446809"></rect>
+                                        </g>
+                                    </g>
+                                    <g id="Group-3-Copy-2" transform="translate(0.000000, 82.000000)">
+                                        <rect id="Rectangle-5" fill="#FFB58D" x="0" y="0" width="20.8" height="21"></rect>
+                                        <rect id="Rectangle-5-Copy" fill="#FF6F43" x="109.672727" y="0" width="20.8" height="21" rx="6"></rect>
+                                        <rect id="Rectangle-5-Copy-3" fill="#FF6F43" x="135.2" y="0" width="20.8" height="21" rx="6"></rect>
+                                        <g id="Group" transform="translate(24.581818, 0.000000)" fill="#FFD5BE">
+                                            <rect id="Text" x="0" y="0" width="81.3090909" height="7.14893617"></rect>
+                                            <rect id="Text-Small" x="0" y="10.2765957" width="81.3090909" height="3.57446809"></rect>
+                                            <rect id="Text-Small-Copy-2" x="0" y="17.4255319" width="81.3090909" height="3.57446809"></rect>
+                                        </g>
+                                    </g>
+                                    <g id="Group-3-Copy-3" transform="translate(0.000000, 123.000000)">
+                                        <rect id="Rectangle-5" fill="#FFB58D" x="0" y="0" width="20.8" height="21"></rect>
+                                        <rect id="Rectangle-5-Copy" fill="#FF6F43" x="109.672727" y="0" width="20.8" height="21" rx="6"></rect>
+                                        <rect id="Rectangle-5-Copy-3" fill="#FF6F43" x="135.2" y="0" width="20.8" height="21" rx="6"></rect>
+                                        <g id="Group" transform="translate(24.581818, 0.000000)" fill="#FFD5BE">
+                                            <rect id="Text" x="0" y="0" width="81.3090909" height="7.14893617"></rect>
+                                            <rect id="Text-Small" x="0" y="10.2765957" width="81.3090909" height="3.57446809"></rect>
+                                            <rect id="Text-Small-Copy-2" x="0" y="17.4255319" width="81.3090909" height="3.57446809"></rect>
+                                        </g>
+                                    </g>
+                                    <g id="Group-3-Copy-4" transform="translate(0.000000, 164.000000)">
+                                        <rect id="Rectangle-5" fill="#FFB58D" x="0" y="0" width="20.8" height="21"></rect>
+                                        <rect id="Rectangle-5-Copy" fill="#FF6F43" x="109.672727" y="0" width="20.8" height="21" rx="6"></rect>
+                                        <rect id="Rectangle-5-Copy-3" fill="#FF6F43" x="135.2" y="0" width="20.8" height="21" rx="6"></rect>
+                                        <g id="Group" transform="translate(24.581818, 0.000000)" fill="#FFD5BE">
+                                            <rect id="Text" x="0" y="0" width="81.3090909" height="7.14893617"></rect>
+                                            <rect id="Text-Small" x="0" y="10.2765957" width="81.3090909" height="3.57446809"></rect>
+                                            <rect id="Text-Small-Copy-2" x="0" y="17.4255319" width="81.3090909" height="3.57446809"></rect>
+                                        </g>
+                                    </g>
+                                    <g id="Group-3-Copy-5" transform="translate(0.000000, 205.000000)">
+                                        <rect id="Rectangle-5" fill="#FFB58D" x="0" y="0" width="20.8" height="21"></rect>
+                                        <rect id="Rectangle-5-Copy" fill="#FF6F43" x="109.672727" y="0" width="20.8" height="21" rx="6"></rect>
+                                        <rect id="Rectangle-5-Copy-3" fill="#FF6F43" x="135.2" y="0" width="20.8" height="21" rx="6"></rect>
+                                        <g id="Group" transform="translate(24.581818, 0.000000)" fill="#FFD5BE">
+                                            <rect id="Text" x="0" y="0" width="81.3090909" height="7.14893617"></rect>
+                                            <rect id="Text-Small" x="0" y="10.2765957" width="81.3090909" height="3.57446809"></rect>
+                                            <rect id="Text-Small-Copy-2" x="0" y="17.4255319" width="81.3090909" height="3.57446809"></rect>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

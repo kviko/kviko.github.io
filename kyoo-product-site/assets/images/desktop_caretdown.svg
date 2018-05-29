@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="8px" viewBox="0 0 14 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Style-Guide-Product-Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons---Desktop" transform="translate(-67.000000, -132.000000)" fill="#FF6F43" fill-rule="nonzero">
+            <g id="caret-symbol" transform="translate(74.000000, 136.000000) rotate(-180.000000) translate(-74.000000, -136.000000) translate(67.000000, 132.000000)">
+                <path d="M13.3958585,6.31846526 L7.29176763,0.203958842 C7.01999242,-0.0679862807 6.57981932,-0.0679862807 6.30835415,0.203958842 L0.203598881,6.31846526 C-0.0678662937,6.59049911 -0.0678662937,7.03133413 0.203598881,7.30336798 L0.695283479,7.79584152 C0.966748654,8.06805283 1.40732038,8.06805283 1.67896272,7.79584152 L6.79999445,2.66632655 L11.9212034,7.79584152 C12.1926242,8.06805283 12.6329745,8.06805283 12.9045283,7.79584152 L13.3962129,7.30336798 C13.6679881,7.03102359 13.6679881,6.59049911 13.3958585,6.31846526 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

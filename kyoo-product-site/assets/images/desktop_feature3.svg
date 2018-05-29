@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="348px" viewBox="0 0 200 348" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>3 SMS Notifications</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="-8.53e-14" width="200" height="348"></rect>
+        <rect id="path-3" x="0" y="0" width="156" height="140"></rect>
+        <filter x="-28.8%" y="-21.4%" width="157.7%" height="164.3%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="15" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="12.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.879650298   0 0 0 0 0.879650298   0 0 0 0 0.879650298  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.0-Web-Home-Page" transform="translate(-168.000000, -2006.000000)">
+            <g id="Section-3---Features" transform="translate(0.000000, 1669.000000)">
+                <g id="V1-Model" transform="translate(56.000000, 129.000000)">
+                    <g id="3-SMS-Notifications" transform="translate(112.000000, 208.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <rect stroke="#FFEADC" x="0.5" y="0.5" width="199" height="347"></rect>
+                        <g id="BG" opacity="0.180000007" mask="url(#mask-2)">
+                            <g transform="translate(-6.000000, 0.000000)">
+                                <g id="Group-3">
+                                    <rect id="Rectangle-5" fill="#FFB58D" x="0" y="0" width="28.2666667" height="29"></rect>
+                                    <rect id="Rectangle-5-Copy" fill="#FF6F43" x="149.042424" y="0" width="28.2666667" height="29" rx="6"></rect>
+                                    <rect id="Rectangle-5-Copy-3" fill="#FF6F43" x="183.733333" y="0" width="28.2666667" height="29" rx="6"></rect>
+                                    <g id="Group" transform="translate(33.406061, 0.000000)" fill="#FFD5BE">
+                                        <rect id="Text" x="0" y="0" width="110.49697" height="9.87234043"></rect>
+                                        <rect id="Text-Small" x="0" y="14.1914894" width="110.49697" height="4.93617021"></rect>
+                                        <rect id="Text-Small-Copy-2" x="0" y="24.0638298" width="110.49697" height="4.93617021"></rect>
+                                    </g>
+                                </g>
+                                <g id="Group-3-Copy" transform="translate(0.000000, 56.000000)">
+                                    <rect id="Rectangle-5" fill="#FFB58D" x="0" y="0" width="28.2666667" height="29"></rect>
+                                    <rect id="Rectangle-5-Copy" fill="#FF6F43" x="149.042424" y="0" width="28.2666667" height="29" rx="6"></rect>
+                                    <rect id="Rectangle-5-Copy-3" fill="#FF6F43" x="183.733333" y="0" width="28.2666667" height="29" rx="6"></rect>
+                                    <g id="Group" transform="translate(33.406061, 0.000000)" fill="#FFD5BE">
+                                        <rect id="Text" x="0" y="0" width="110.49697" height="9.87234043"></rect>
+                                        <rect id="Text-Small" x="0" y="14.1914894" width="110.49697" height="4.93617021"></rect>
+                                        <rect id="Text-Small-Copy-2" x="0" y="24.0638298" width="110.49697" height="4.93617021"></rect>
+                                    </g>
+                                </g>
+                                <g id="Group-3-Copy-2" transform="translate(0.000000, 111.000000)">
+                                    <rect id="Rectangle-5" fill="#FFB58D" x="0" y="0" width="28.2666667" height="29"></rect>
+                                    <rect id="Rectangle-5-Copy" fill="#FF6F43" x="149.042424" y="0" width="28.2666667" height="29" rx="6"></rect>
+                                    <rect id="Rectangle-5-Copy-3" fill="#FF6F43" x="183.733333" y="0" width="28.2666667" height="29" rx="6"></rect>
+                                    <g id="Group" transform="translate(33.406061, 0.000000)" fill="#FFD5BE">
+                                        <rect id="Text" x="0" y="0" width="110.49697" height="9.87234043"></rect>
+                                        <rect id="Text-Small" x="0" y="14.1914894" width="110.49697" height="4.93617021"></rect>
+                                        <rect id="Text-Small-Copy-2" x="0" y="24.0638298" width="110.49697" height="4.93617021"></rect>
+                                    </g>
+                                </g>
+                                <g id="Group-3-Copy-3" transform="translate(0.000000, 167.000000)">
+                                    <rect id="Rectangle-5" fill="#FFB58D" x="0" y="0" width="28.2666667" height="29"></rect>
+                                    <rect id="Rectangle-5-Copy" fill="#FF6F43" x="149.042424" y="0" width="28.2666667" height="29" rx="6"></rect>
+                                    <rect id="Rectangle-5-Copy-3" fill="#FF6F43" x="183.733333" y="0" width="28.2666667" height="29" rx="6"></rect>
+                                    <g id="Group" transform="translate(33.406061, 0.000000)" fill="#FFD5BE">
+                                        <rect id="Text" x="0" y="0" width="110.49697" height="9.87234043"></rect>
+                                        <rect id="Text-Small" x="0" y="14.1914894" width="110.49697" height="4.93617021"></rect>
+                                        <rect id="Text-Small-Copy-2" x="0" y="24.0638298" width="110.49697" height="4.93617021"></rect>
+                                    </g>
+                                </g>
+                                <g id="Group-3-Copy-4" transform="translate(0.000000, 223.000000)">
+                                    <rect id="Rectangle-5" fill="#FFB58D" x="0" y="0" width="28.2666667" height="29"></rect>
+                                    <rect id="Rectangle-5-Copy" fill="#FF6F43" x="149.042424" y="0" width="28.2666667" height="29" rx="6"></rect>
+                                    <rect id="Rectangle-5-Copy-3" fill="#FF6F43" x="183.733333" y="0" width="28.2666667" height="29" rx="6"></rect>
+                                    <g id="Group" transform="translate(33.406061, 0.000000)" fill="#FFD5BE">
+                                        <rect id="Text" x="0" y="0" width="110.49697" height="9.87234043"></rect>
+                                        <rect id="Text-Small" x="0" y="14.1914894" width="110.49697" height="4.93617021"></rect>
+                                        <rect id="Text-Small-Copy-2" x="0" y="24.0638298" width="110.49697" height="4.93617021"></rect>
+                                    </g>
+                                </g>
+                                <g id="Group-3-Copy-5" transform="translate(0.000000, 278.000000)">
+                                    <rect id="Rectangle-5" fill="#FFB58D" x="0" y="0" width="28.2666667" height="29"></rect>
+                                    <rect id="Rectangle-5-Copy" fill="#FF6F43" x="149.042424" y="0" width="28.2666667" height="29" rx="6"></rect>
+                                    <rect id="Rectangle-5-Copy-3" fill="#FF6F43" x="183.733333" y="0" width="28.2666667" height="29" rx="6"></rect>
+                                    <g id="Group" transform="translate(33.406061, 0.000000)" fill="#FFD5BE">
+                                        <rect id="Text" x="0" y="0" width="110.49697" height="9.87234043"></rect>
+                                        <rect id="Text-Small" x="0" y="14.1914894" width="110.49697" height="4.93617021"></rect>
+                                        <rect id="Text-Small-Copy-2" x="0" y="24.0638298" width="110.49697" height="4.93617021"></rect>
+                                    </g>
+                                </g>
+                                <g id="Group-3-Copy-6" transform="translate(0.000000, 333.000000)">
+                                    <rect id="Rectangle-5" fill="#FFB58D" x="0" y="0" width="28.2666667" height="29"></rect>
+                                    <rect id="Rectangle-5-Copy" fill="#FF6F43" x="149.042424" y="0" width="28.2666667" height="29" rx="6"></rect>
+                                    <rect id="Rectangle-5-Copy-3" fill="#FF6F43" x="183.733333" y="0" width="28.2666667" height="29" rx="6"></rect>
+                                    <g id="Group" transform="translate(33.406061, 0.000000)" fill="#FFD5BE">
+                                        <rect id="Text" x="0" y="0" width="110.49697" height="9.87234043"></rect>
+                                        <rect id="Text-Small" x="0" y="14.1914894" width="110.49697" height="4.93617021"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="SMS-Sent" mask="url(#mask-2)">
+                            <g transform="translate(23.000000, 111.000000)">
+                                <g id="Rectangle">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                                </g>
+                                <g id="SMS-Info" stroke-width="1" fill-rule="evenodd" transform="translate(31.000000, 17.000000)">
+                                    <g id="Text" transform="translate(0.000000, 71.000000)" fill="#FFD5BE">
+                                        <rect x="-2.84e-14" y="0" width="86.207213" height="7.80659507"></rect>
+                                        <rect id="Text-Small" x="-2.84e-14" y="12.1081081" width="86.207213" height="3.90329754"></rect>
+                                        <rect id="Text-Small-Copy-4" x="-2.84e-14" y="19.8918919" width="86.207213" height="3.90329754"></rect>
+                                        <rect id="Text-Small-Copy-5" x="-2.84e-14" y="27.6756757" width="86.207213" height="3.90329754"></rect>
+                                    </g>
+                                    <g id="Email" transform="translate(16.000000, 17.000000)" fill="#FFB58D" fill-rule="nonzero">
+                                        <path d="M4.99097388,11.1411097 C5.64876687,11.5517453 7.63159808,12.771334 10.9395691,14.7992463 C14.2476418,16.8271586 16.7818524,18.3885989 18.5423024,19.4836572 C18.7357171,19.6036919 19.1466345,19.8646213 19.7752577,20.2668051 C20.4039826,20.6692585 20.9263955,20.9944762 21.3420897,21.2425479 C21.7580889,21.4905297 22.2609875,21.7687226 22.8512937,22.0766768 C23.4413966,22.3843613 23.9976545,22.615799 24.5199658,22.7690118 C25.0423786,22.9234835 25.5259662,23 25.9708303,23 L26,23 L26.0292714,23 C26.4741354,23 26.9579263,22.9233936 27.4803392,22.7690118 C28.0024471,22.615799 28.5592132,22.3840915 29.1488079,22.0766768 C29.7387076,21.7683629 30.2416062,21.4904398 30.6576054,21.2425479 C31.0736045,20.9944762 31.5956109,20.6692585 32.224539,20.2668051 C32.8530606,19.8642617 33.2644862,19.6036919 33.4579009,19.4836572 C35.237357,18.3885989 39.7645624,15.60748 47.0380942,11.1405702 C48.4502351,10.2681381 49.6300344,9.21542918 50.5777971,7.98316269 C51.5262711,6.75143569 52,5.45928671 52,4.10743508 C52,2.97776006 51.540297,2.01073882 50.6212976,1.20646127 C49.7023998,0.402003901 48.6140736,0 47.3570303,0 L4.64266476,0 C3.1531783,0 2.00691912,0.44489271 1.20409049,1.33467813 C0.401363496,2.22464338 0,3.33705498 0,4.67182302 C0,5.74997752 0.532169984,6.91831541 1.59600177,8.17611737 C2.65973191,9.43400925 3.79176195,10.4224299 4.99097388,11.1411097 Z" id="Shape"></path>
+                                        <path d="M49.0977685,15.2797865 C42.7532089,19.1578466 37.9356367,22.1717394 34.6473896,24.3208223 C33.5447347,25.054286 32.6502315,25.6268486 31.9632701,26.037133 C31.2763087,26.4476929 30.3626978,26.8669724 29.2211162,27.294788 C28.0799411,27.7232461 27.0164163,27.9368327 26.0296271,27.9368327 L26.0000508,27.9368327 L25.9708811,27.9368327 C24.9842952,27.9368327 23.9201606,27.7232461 22.7789855,27.294788 C21.6378104,26.8669724 20.7235896,26.4476929 20.0368315,26.037133 C19.3502767,25.6268486 18.4554685,25.054286 17.3529153,24.3208223 C14.741161,22.591386 9.93395579,19.5773097 2.93109629,15.2797865 C1.82813651,14.6163556 0.851206054,13.8559066 0,13 L0,33.8065623 C0,34.9603153 0.454416987,35.9469255 1.36375914,36.7680452 C2.27289803,37.5894402 3.36610069,38 4.64296059,38 L47.3573443,38 C48.6338993,38 49.7270003,37.5894402 50.6362409,36.7680452 C51.5457863,35.9466502 52,34.9604071 52,33.8065623 L52,13 C51.1680033,13.8381919 50.2010332,14.5986408 49.0977685,15.2797865 Z" id="Shape"></path>
+                                    </g>
+                                    <g id="Check" transform="translate(62.000000, 2.000000)">
+                                        <circle id="Oval-2" stroke="#FF6F43" stroke-width="2" fill="#FFFFFF" cx="15.5" cy="15.5" r="15.5"></circle>
+                                        <g id="checked" transform="translate(7.000000, 9.000000)" fill="#FF6F43" fill-rule="nonzero">
+                                            <path d="M0.195,7.15 C0.065,7.02 0,6.825 0,6.695 C0,6.565 0.065,6.37 0.195,6.24 L1.105,5.33 C1.365,5.07 1.755,5.07 2.015,5.33 L2.08,5.395 L5.655,9.23 C5.785,9.36 5.98,9.36 6.11,9.23 L14.82,0.195 L14.885,0.195 C15.145,-0.065 15.535,-0.065 15.795,0.195 L16.705,1.105 C16.965,1.365 16.965,1.755 16.705,2.015 L6.305,12.805 C6.175,12.935 6.045,13 5.85,13 C5.655,13 5.525,12.935 5.395,12.805 L0.325,7.345 L0.195,7.15 Z" id="Shape"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
