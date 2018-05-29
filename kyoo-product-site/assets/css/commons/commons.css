@@ -621,7 +621,7 @@ button.btn.dark:hover{
 *[class*="no-float"]{float: initial;}
 
 /*display none / block / inline-block*/
-*[class*="none"]{display: none;}
+*[class*="none"]{display: none !important;}
 *[class*="block"]{display: block !important;}
 *[class*="inline-block"]{display: inline-block !important;}
 
