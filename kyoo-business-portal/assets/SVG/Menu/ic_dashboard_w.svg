@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_dashboard_w</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Assets-🍕" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons---24px" transform="translate(-314.000000, -26.000000)">
+            <g id="ic_dashboard_w" transform="translate(312.000000, 24.000000)">
+                <polygon id="Bounds" fill-opacity="0.1" fill="#FF0000" opacity="0" points="0 0 24 0 24 24 0 24"></polygon>
+                <path d="M12.9978436,2 L12.9978436,5.01537249 C16.397177,5.5199054 18.9966673,8.43279464 18.9966673,11.9527 C18.9966673,12.8592826 18.7967065,13.6633819 18.4987257,14.4674813 L21.098216,15.9771384 C21.6980984,14.7709894 22,13.3638155 22,11.8581001 C21.9960792,6.72211273 18.0988042,2.50059125 12.9978436,2 Z M11.9980396,18.9846275 C8.10076456,18.9846275 4.99941188,15.8707134 4.99941188,11.9487584 C4.99941188,8.43279464 7.59890218,5.51596374 10.9982356,5.01537249 L10.9982356,2 C5.90119584,2.40204966 2,6.72211273 2,11.9487584 C2,17.4789121 6.50107822,22 11.9980396,22 C15.2993531,22 18.1968242,20.3918013 20.0984121,17.8809618 L17.4989218,16.3752464 C16.1972162,17.9795034 14.1976083,18.9846275 11.9980396,18.9846275 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons---24px" transform="translate(-76.000000, -76.000000)">
+            <g id="ic_rsv_settings-copy" transform="translate(72.000000, 72.000000)">
+                <polygon id="Bounds" fill-opacity="0.1" fill="#FF0000" opacity="0" points="0 0 24 0 24 24 0 24"></polygon>
+                <path d="M11.1281397,13.1948071 L9.46512763,11.571969 L8.16666667,12.9273639 L11.1281397,15.6615226 L16.3819541,10.5071616 L15.1417838,9.24998983 L11.1281397,13.1948071 Z M12.3333333,4 C7.725,4 4,7.725 4,12.3333333 C4,16.9416667 7.725,20.6666667 12.3333333,20.6666667 C16.9416667,20.6666667 20.6666667,16.9416667 20.6666667,12.3333333 C20.6666667,7.725 16.9416667,4 12.3333333,4 L12.3333333,4 Z" id="Shape" fill="#000"></path>
+            </g>
+        </g>
+    </g>
+</svg>

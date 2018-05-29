@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_plus_thin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Assets-🍕" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons---24px" transform="translate(-27.000000, -315.000000)">
+            <g id="ic_plus_thin" transform="translate(24.000000, 312.000000)">
+                <g id="ic_add">
+                    <polygon id="Bounds" fill-opacity="0.1" fill="#FF0000" opacity="0" points="0 0 24 0 24 24 0 24"></polygon>
+                    <polygon id="Shape" fill="#FFA270" points="21 13.2857143 13.2857143 13.2857143 13.2857143 21 10.7142857 21 10.7142857 13.2857143 3 13.2857143 3 10.7142857 10.7142857 10.7142857 10.7142857 3 13.2857143 3 13.2857143 10.7142857 21 10.7142857"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
