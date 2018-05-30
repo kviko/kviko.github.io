@@ -101,15 +101,18 @@ $(document).ready(function(){
 			// });
 		},500);
 	}else{
-		$("header .content .menu-btn").click(function(){
-			if($(this).hasClass("open")){
-				$(this).removeClass("open");
-				$("header").removeClass("show-menu");
-			}else{
-				$(this).addClass("open")
-				$("header").addClass("show-menu")
-			}
-		});
+
+		$("header .content .menu-btn,header .content a").each(function(){
+			$(this).click(function(){
+				if($("header .content .menu-btn").hasClass("open")){
+					$("header .content .menu-btn").removeClass("open");
+					$("header").removeClass("show-menu");
+				}else{
+					$("header .content .menu-btn").addClass("open")
+					$("header").addClass("show-menu")
+				}
+			});
+		})
 
 		$(".main-nav li.common-link a").each(function(){
 			$(this).click(function(){

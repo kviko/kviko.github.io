@@ -329,7 +329,7 @@ button.btn.dark:hover{
 	.form-container input[type="password"],
 	.form-container textarea{
 		min-width: 50%;
-		padding: 7.5px 11.5px;
+		
 		font-size: 12px;
 	}
 
@@ -354,6 +354,13 @@ button.btn.dark:hover{
 }
 
 @media(max-width: 480px){
+	.form-container input[type="text"],
+	.form-container input[type="email"],
+	.form-container input[type="password"],
+	.form-container textarea{
+		padding: 7.5px 11.5px;
+	}
+
 	.form-container.large input[type="text"],
 	.form-container.large input[type="email"],
 	.form-container textarea{
