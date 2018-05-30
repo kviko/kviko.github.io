@@ -330,7 +330,6 @@ button.btn.dark:hover{
 	.form-container textarea{
 		min-width: 50%;
 		
-		font-size: 12px;
 	}
 
 	.form-container.large input[type="text"],
@@ -359,6 +358,7 @@ button.btn.dark:hover{
 	.form-container input[type="password"],
 	.form-container textarea{
 		padding: 7.5px 11.5px;
+		font-size: 12px;
 	}
 
 	.form-container.large input[type="text"],
