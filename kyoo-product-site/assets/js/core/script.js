@@ -112,7 +112,7 @@ $(document).ready(function(){
 					$("header").addClass("show-menu")
 				}
 			});
-		})
+		});
 
 		$(".main-nav li.common-link a").each(function(){
 			$(this).click(function(){
@@ -128,7 +128,6 @@ $(document).ready(function(){
 			$(".features-button,.feature-display,.feature-display-tablet").removeClass("active");
 			$(this).addClass("active");
 			$(".feature-display.feature-"+e+",.feature-display-tablet.feature-"+e).addClass("active");
-
 		});
 	});
 
@@ -215,4 +214,3 @@ $(document).scroll(function(){
 		});
 	}
 });	
-			
