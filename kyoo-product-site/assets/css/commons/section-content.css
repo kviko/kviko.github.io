@@ -142,6 +142,11 @@ section[data-sect-type] img.feature-device{
 	width: 40%;
 }
 
+section[data-sect-type] img.feature-device-mac{
+	left: 20%;
+	width: 70%;
+}
+
 section[data-sect-type] .feature-device-container{
 	position: absolute;
 	transition: top .5s;
@@ -192,7 +197,8 @@ section[data-sect-type] div.feature-display-tablet{
 	opacity: 0;
 }
 
-section[data-sect-type] div.feature-overlay div.feature-display img.feature-bg{
+section[data-sect-type] div.feature-overlay div.feature-display img.feature-bg,
+section[data-sect-type] div.feature-overlay.mac div.feature-display img.feature-bg{
 	position: absolute;
     top: 30%;
     left: 7%;
@@ -201,14 +207,45 @@ section[data-sect-type] div.feature-overlay div.feature-display img.feature-bg{
 
     transition: .5s opacity;
 }
-section[data-sect-type] div.feature-overlay div.feature-display img.feature-fg{
+section[data-sect-type] div.feature-overlay div.feature-display img.feature-fg,
+section[data-sect-type] div.feature-overlay.mac div.feature-display img.feature-fg{
 	position: absolute;
-    top: 188px;
+    top: 40%;
     left: 26%;
     width: 45%;
     opacity: 0;
 
     transition: .5s opacity;
+}
+
+section[data-sect-type] div.feature-overlay.mac div.feature-display img.feature-bg{
+    top: 6%;
+    left: 3%;
+    width: 64%;
+}
+
+section[data-sect-type] div.feature-overlay.mac div.feature-display.biz-1 img.feature-fg{
+	top: 17%;
+    left: 43%;
+    width: 35%;
+}
+
+section[data-sect-type] div.feature-overlay.mac div.feature-display.biz-2 img.feature-fg{
+	left: 21%;
+    width: 60%;
+    top: 17%;
+}
+
+section[data-sect-type] div.feature-overlay.mac div.feature-display.biz-3 img.feature-fg{
+	left: 30%;
+    width: 46%;
+    top: 43%;
+}
+
+section[data-sect-type] div.feature-overlay.mac div.feature-display.biz-4 img.feature-fg{
+    left: 5%;
+    width: 51%;
+    top: -15%;
 }
 
 section[data-sect-type] div.feature-display-tablet.active,
@@ -223,10 +260,10 @@ section[data-sect-type] div.feature-overlay div.feature-display.active img.featu
 
 @keyframes showFeat{
  	from{
- 		top: 40%;
+ 		margin-top: 10%;
  		opacity: 0;
 	}to{
-		top: 35%;
+		margin-top: 0%;
 		opacity: 1;
 	}
 }
@@ -324,10 +361,19 @@ section[data-sect-type] .mobile-feature button.slick-arrow{
 @media(max-width: 480px){
 	section[data-sect-type] .mobile-feature img.feature-fg{
 		position: absolute;
-		width: 100%;
+		/*width: 100%;*/
 		top: 55%;
 		left: 0;
 	}
+}
+
+section[data-sect-type] .slick-slide{
+	width: 80vw;
+	/*width: 100%;*/
+}
+
+section[data-sect-type] .mobile-feature .slick-list{
+	background-color: #f6f7fb;
 }
 
 /*testi*/

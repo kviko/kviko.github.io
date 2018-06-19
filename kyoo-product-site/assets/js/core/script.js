@@ -123,14 +123,6 @@ $(document).ready(function(){
 
 	}
 
-	$(".features-button").each(function(e){
-		$(this).click(function(){
-			$(".features-button,.feature-display,.feature-display-tablet").removeClass("active");
-			$(this).addClass("active");
-			$(".feature-display.feature-"+e+",.feature-display-tablet.feature-"+e).addClass("active");
-		});
-	});
-
 	// clients
 
 	$(".client-container .client-hover").each(function(){
@@ -156,17 +148,49 @@ $(document).ready(function(){
 		});
 	}
 
-
 	$(".mobile-feature").slick({
 		autoplay:false,
 		arrows:false,
-		dots:true
+		dots:true,
+		variableWidth: true,
+		centerMode: true,
+		mobileFirst: true,
+		slidesToShow: 1
 	});
+
 
 	$(".client-container").slick({
 		dots:false,
 	});
 
+	//tabs
+	$(".tab-btn").each(function(i){
+		$(this).click(function(){
+			$(".tab-btn,.tab-content").removeClass("active");
+			$(this).addClass("active");
+			$(".tab-content.tab-"+(i+1)).addClass("active");
+
+			$(".mobile-feature").slick('unslick');
+			$(".mobile-feature").slick({
+				autoplay:false,
+				arrows:false,
+				dots:true,
+				variableWidth: true,
+				centerMode: true,
+				mobileFirst: true,
+				slidesToShow: 1
+			});
+		});
+	});
+
+	//features
+	$(".features-button").each(function(e){
+		$(this).click(function(){
+			$(".tab-content.active .features-button,.tab-content.active .feature-display,.feature-display-tablet").removeClass("active");
+			$(this).addClass("active");
+			$(".tab-content.active .feature-display.feature-"+e+",.tab-content.active .feature-display-tablet.feature-"+e).addClass("active");
+		});
+	});
 
 });
 
@@ -205,7 +229,7 @@ $(document).scroll(function(){
 						}
 					});
 				}
-			}if(wst >= $("#features").offset().top && wst <= ($("#how-it-works").offset().top) - ($("#how-it-works").height())){
+			}if(wst >= $("#features").offset().top && wst <= ($("#how-it-works").offset().top) - ($("#features").height())){
 				var posD = ($(window).scrollTop() - $("#features").offset().top);
 				$(".feature-device-container").css({top:posD});
 			}else if(wst < $("#features").offset().top){
