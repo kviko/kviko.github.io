@@ -318,11 +318,11 @@ section[data-sect-type] .hiw-1-3{
 	}
 
 	section[data-sect-type] div.features-button{
-		padding: 2.14vw;
+		padding: 1.5vw;
 	}
 
 	section[data-sect-type] div.features-button .feature-title{
-		font-size: 1.43vw;
+		font-size: 1vw;
 	}
 }
 
@@ -511,8 +511,8 @@ section[data-sect-type].profile-container .slick-dots li.slick-active button{
 	}
 
 	section[data-sect-type] .profile{
-		width: 14.29vw;
-		height: 14.29vw;
+		width: 8.29vw;
+		height: 8.29vw;
 	}
 
 	section[data-sect-type].profile-container .slick-dots li button{

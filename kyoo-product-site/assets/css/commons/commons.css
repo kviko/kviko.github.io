@@ -154,13 +154,14 @@ button.btn:hover{
 a.button.dark:hover,
 button.btn.dark:hover{
 	background-color: #FFA283;
+	border-color: #FFA283;
 }
 
 @media(min-width: 1600px){
 	a.button,
 	button.btn{
 		padding: .86vw 1.43vw;
-		font-size: 1.14vw;
+		font-size: 0.8vw;
 	}
 
 
@@ -310,7 +311,7 @@ button.btn.dark:hover{
 	position: absolute;
 	display: block;
 	top: 12px;
-	margin: 0 0 0 20px;
+	margin: 0 0 0 10px;
 	font-size: 14px;
 	line-height: 1.5;
 	opacity: 0;
@@ -349,7 +350,6 @@ button.btn.dark:hover{
 	font-weight: bold;
 	text-align: left;
 	opacity: 0;
-
 	transition: .5s opacity;
 }
 
@@ -369,23 +369,23 @@ button.btn.dark:hover{
 	.form-container input[type="email"],
 	.form-container input[type="password"],
 	.form-container textarea{
-		padding: .86vw 1.43vw;
-		font-size: 1vw;
+		padding: .80vw 1.43vw;
+		font-size: 0.8vw;
 	}
 
 	.form-container label{
 		margin: 0 0 0 1.43vw;
-		font-size: 1vw;
+		font-size: 0.6vw;
 	}
 
 	.form-container input:focus,
 	.form-container textarea:focus{
-		padding-top: 1.57vw;
-		padding-bottom: .43vw;
+		padding-top: 1.2vw;
+		padding-bottom: .40vw;
 	}
 
 	.form-container textarea:focus{
-		padding-top: 1.76vw;
+		padding-top: 1.4vw;
 	}
 
 	.form-container input:focus + label,
@@ -394,8 +394,9 @@ button.btn.dark:hover{
 	}
 
 	.form-container .error-msg{
-		margin-top: 0.71vw;
-		font-size: 0.86vw;
+		margin-top: 0.41vw;
+		margin-bottom: 0.60vw;
+		font-size: 0.6vw;
 	}
 
 }
@@ -669,8 +670,8 @@ button.btn.dark:hover{
 
 @media(min-width: 1600px){
 	*[class*='text-size-14']{font-size: 1vw !important;}
-	*[class*='text-size-16']{font-size: 1.14vw !important;}
-	*[class*='text-size-20']{font-size: 1.43vw !important;}
+	*[class*='text-size-16']{font-size: 1vw !important;}
+	*[class*='text-size-20']{font-size: 1vw !important;}
 	*[class*='text-size-24']{font-size: 1.71vw !important;}
 	*[class*='text-size-28']{font-size: 2vw !important;}
 	*[class*='text-size-32']{font-size: 2.29vw !important;}
