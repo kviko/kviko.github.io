@@ -1,0 +1,320 @@
+@import '_mixins';
+
+/* 
+YOU Framework V1.0.1
+By Leisue Kaiko
+
+Table of contents
+- Colors
+- Base Styles
+- Grid
+- Typography
+- Links
+- Buttons
+- Forms
+- Lists
+- Code
+- Tables
+- Spacing
+- Utilities
+- Clearing
+- Media Queries
+*/
+
+
+
+
+
+/* COLORS */
+// ------------------------------------------
+// Solid Greyscale
+$black: 			rgba(0,0,0,1);//#000; 	
+$grey-0: 			#222; 	
+$grey-1:		    #292929;
+$grey-2: 		    #7F7F7F;
+$grey-3:		    #C2C2C2;
+$grey-4: 		    #D6D6D6;
+$grey-5:		    #F0F0F0;
+$grey-6: 		    #FAFAFA;
+$white:				#FFF;	
+// Transparent Dark 	
+$grey-1s:			rgba(0,0,0,0.84);
+$grey-2s: 			rgba(0,0,0,0.50);
+$grey-3s:			rgba(0,0,0,0.24);
+$grey-4s: 			rgba(0,0,0,0.16);
+$grey-5s:			rgba(0,0,0,0.06);
+$grey-6s: 			rgba(0,0,0,0.02);
+// Transparent Light 	
+$white-1s:			rgba(255,255,255,0.84);
+$white-2s: 			rgba(255,255,255,0.50);
+$white-3s:			rgba(255,255,255,0.24);
+$white-4s: 			rgba(255,255,255,0.16);
+$white-5s:			rgba(255,255,255,0.06);
+$white-6s: 			rgba(255,255,255,0.02);
+// Brand Colors - Leisue
+$primary: 			#ED0A28; // Spanish Red
+$primary-light: 	#F57989; // Paradise Pink
+$primary-dark:		#C20921; // Venetian Red
+$secondary:			#464547; // Outer Space
+$secondary-light:	#787779; // Sonic Silver
+$secondary-dark:	#2D2C2E; // Onyx
+$kyoo-a:			#FE7401;
+$kyoo-b:			#FE8F02;
+// Sub Colors
+$green:				#28A745;	$green-light: lighten($green, 40%);		$green-dark: darken($green, 12%);
+$red:				#DC3545;	$red-light: lighten($red, 40%);			$red-dark: darken($red, 12%);
+$yellow:			#FFC107;	$yellow-light: lighten($yellow, 40%);	$yellow-dark: darken($yellow, 12%);
+$blue:				#007BFF;	$blue-light: lighten($blue, 40%);		$blue-dark: darken($blue, 12%);
+$bleen:				#17A2B8;	$bleen-light: lighten($bleen, 40%);		$bleen-dark: darken($bleen, 12%);
+
+
+
+
+
+
+/* BASE STYLE */
+// ------------------------------------------
+html, body{
+	margin: 0;
+	height: 100%;
+	font-family: "Raleway", Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+	@include border-box;
+}
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html { font-size: 62.5%; }
+body { 
+	font-size: 1.8rem; /* currently ems cause chrome bug misinterpreting rems on body element */
+	line-height: 1.4;
+	font-weight: 400;
+	@include for-size(tablet-landscape-down) {
+		font-size: 1.4rem; 
+	}
+}
+section { 
+	width: 100%; 
+	@include for-size(tablet-landscape-down) {
+		min-height: 100vh; height: auto; 
+	}
+}
+* { &:focus{ outline: none; } }
+
+
+
+
+
+/* TYPOGRAPHY */
+// ------------------------------------------
+// Base
+h1, h2, h3, h4, h5, h6, p, small, label {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  &.no-mar  {margin-bottom: 0;}
+}
+// Heading
+h1, h2, h3 { font-family: "Montserrat", Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,Oxygen-Sans, Ubuntu, Cantarell, sans-serif; }
+h1 { font-size: 7.2rem; line-height: 1.2; 	font-weight: 700; }
+h2 { font-size: 5.2rem; line-height: 1.25;	font-weight: 700; } 
+h3 { font-size: 3.6rem; line-height: 1.3;	font-weight: 700; }
+h4 { font-size: 2.4rem; line-height: 1.35; 	font-weight: 400; }
+h5 { font-size: 2.0rem; line-height: 1.4; 	font-weight: 700; }
+h6 { font-size: 1.4rem; line-height: 1.4;	font-weight: 700;	text-transform: uppercase; }
+// Body
+p  { font-size: 2.0rem; line-height: 1.8; font-weight: 400;}
+small{ font-size: 1.4rem; line-height: 1.4;	font-weight: 700;}
+// Tablet landscape Size - max-width: 899px
+@include for-size(tablet-landscape-down) {
+  h1 { font-size: 5.0rem; }
+  h2 { font-size: 3.6rem; }
+  h3 { font-size: 2.8rem; }
+  h4 { font-size: 2.0rem; }
+  h5 { font-size: 1.8rem; }
+  h6 { font-size: 1.2rem; }
+  p  { font-size: 1.8rem; }
+  small { font-size: 1.0rem;}
+}
+// Text Classes
+.lowercase { text-transform: lowercase;}
+.uppercase { text-transform: uppercase;}
+.capitalize { text-transform: capitalize;}
+.bold { font-weight: 700;}
+.semibold { font-weight: 600;}
+.italic { font-style: italic;}
+.large { font-size: 7.2rem;}
+.page-desc {font-weight: 400; }
+
+
+
+
+
+// BUTTON
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 4.6rem;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+  font-weight: 600;
+  font-family: 'Work Sans', sans-serif;
+  text-transform: none;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 10px 23px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  color: #36B0C1; }
+  .button:hover, .button:focus,
+  button:hover,
+  button:focus,
+  input[type="submit"]:hover,
+  input[type="submit"]:focus,
+  input[type="reset"]:hover,
+  input[type="reset"]:focus,
+  input[type="button"]:hover,
+  input[type="button"]:focus {
+    color: #A69979; }
+  .button.botton-primary,
+  button.botton-primary,
+  input[type="submit"].botton-primary,
+  input[type="reset"].botton-primary,
+  input[type="button"].botton-primary {
+    color: #FFF;
+    background-color: #36B0C1; }
+    .button.botton-primary:hover, .button.botton-primary:focus,
+    button.botton-primary:hover,
+    button.botton-primary:focus,
+    input[type="submit"].botton-primary:hover,
+    input[type="submit"].botton-primary:focus,
+    input[type="reset"].botton-primary:hover,
+    input[type="reset"].botton-primary:focus,
+    input[type="button"].botton-primary:hover,
+    input[type="button"].botton-primary:focus {
+      -webkit-box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.15); }
+  .button.botton-secondary,
+  button.botton-secondary,
+  input[type="submit"].botton-secondary,
+  input[type="reset"].botton-secondary,
+  input[type="button"].botton-secondary {
+    color: #FFF;
+    background-color: rgba(255, 255, 255, 0.2); }
+    .button.botton-secondary:hover, .button.botton-secondary:focus,
+    button.botton-secondary:hover,
+    button.botton-secondary:focus,
+    input[type="submit"].botton-secondary:hover,
+    input[type="submit"].botton-secondary:focus,
+    input[type="reset"].botton-secondary:hover,
+    input[type="reset"].botton-secondary:focus,
+    input[type="button"].botton-secondary:hover,
+    input[type="button"].botton-secondary:focus {
+      -webkit-box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.15); }
+
+    .button.botton-kyoo,
+    button.botton-kyoo,
+    input[type="submit"].botton-kyoo,
+    input[type="reset"].botton-kyoo,
+    input[type="button"].botton-kyoo {
+		color: #FFF;
+		background-color: $kyoo-a; }
+		.button.botton-kyoo:hover, .button.botton-kyoo:focus,
+		button.botton-kyoo:hover,
+		button.botton-kyoo:focus,
+		input[type="submit"].botton-kyoo:hover,
+		input[type="submit"].botton-kyoo:focus,
+		input[type="reset"].botton-kyoo:hover,
+		input[type="reset"].botton-kyoo:focus,
+		input[type="button"].botton-kyoo:hover,
+		input[type="button"].botton-kyoo:focus {
+		background-color: $kyoo-b;
+	    -webkit-box-shadow: 0 12px 24px 0 rgba($kyoo-a, 0.35);
+	    -moz-box-shadow: 0 12px 24px 0 rgba($kyoo-a, 0.35);
+	    box-shadow: 0 12px 24px 0 rgba($kyoo-a, 0.35); 
+    }
+
+  .button.large,
+  button.large,
+  input[type="submit"].large,
+  input[type="reset"].large,
+  input[type="button"].large {
+    height: 54px;
+    min-width: 200px;
+    padding: 16px 26px 16px 32px; 
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: 300;
+	font-size: 1.6rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

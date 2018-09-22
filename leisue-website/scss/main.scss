@@ -1,0 +1,418 @@
+@import '_you';
+
+
+
+
+
+
+// GENERAL
+.wrapper {
+	height: 100%; width: 100%;
+	@include flexbox;
+	@include justify-content(center);
+	@include align-items(center);
+	.container { 
+		height: 100%; width: 80%; 
+		@include for-size(tablet-landscape-down) { width: 94%; }
+		@include for-size(phone-only) { width: 92%; }
+	}
+}
+a {
+	text-decoration: none;
+	&:hover { cursor: pointer; outline: none; }
+	&.disabled {
+	    pointer-events: none;
+	}
+}
+
+footer#footer{
+	font-size: 1.4rem; 
+	color: $white;
+	background-color: $secondary;
+	.container { 
+		height: 50px;
+		@include flexbox;
+		@include justify-content(space-between);
+		@include align-items(center);
+	}
+}
+.link-2 { color: $secondary-light; &:hover{ color: $primary; } }
+
+
+
+
+// NAVIGATION BAR
+nav, .nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+	background-color: $grey-1s;
+	height: 80px; width: 100%;
+	.container {
+		@include flexbox;
+		@include justify-content(space-between);
+		@include align-items(center);
+	}
+	.nav-logo-box{
+		@include flexbox;
+		@include align-items(center);
+		img { height: 50px; }
+	}
+	.nav-links {
+		a { margin-left: 16px; }
+		h5 { 
+			margin-left: 16px;
+			margin-bottom: 0;
+			font-weight: 600;
+			display: inline;
+		}
+	}
+	@include for-size(tablet-landscape-down) {
+		background-color: $grey-1s;
+		height: 70px;
+		.nav-logo-box {
+			img { height: 40px; }
+		}
+		.nav-links { 
+			display: none;
+			a, h5 { 
+				color: $white;
+				margin-left: 10px;
+			}
+		}
+	}
+	@include for-size(phone-only) {
+		height: 60px; 	
+		.nav-logo-box { img { height: 30px; } }
+		.nav-links { display: none; }
+	}
+}
+// NAV LINK
+.link-nav * {
+	@include transition(all 0.08s linear);
+	color: $white;
+	&:hover{ color: $primary-dark; }
+	&.active{
+		color: $primary;
+		&:hover{ color: $primary-dark; }
+		span {
+			border-bottom: 2px solid $primary;
+			@include border-radius(1px); 
+			&:hover { border-bottom: 2px solid $primary-dark; }
+		}
+	}
+}
+// MOBILE NAV
+#mobile-nav-box{
+	@include transition(all 0.3s ease-out);
+	&.open-menu {
+		background-color: rgba(0,0,0,0.95);
+		right: 0;
+	}
+	@include for-size(tablet-landscape-up) { display: none; }
+	@include flexbox;
+	@include justify-content(center);
+	@include align-items(center);
+	z-index: 90;
+	position: fixed;
+	right: -100%;
+	width: 100%;
+	height: 100%;
+	.mobile-nav-links{
+		text-align: center;
+		a h1 { 
+			font-weight: 100;
+			margin-bottom: 0.8em;
+		}
+	}
+}
+// HAMBURGER ICON
+#nav-icon {
+	cursor: pointer;
+	@include for-size(tablet-landscape-up) { display: none; }
+	width: 38px;
+	height: 36px;
+	position: relative;
+	// margin: 50px auto;
+	@include rotate (0);
+	@include transition(0.15s ease-in-out);
+	span {
+		display: block;
+		position: absolute;
+		height: 2px;
+		width: 100%;
+		background: $white;
+		border-radius: 10px;
+		opacity: 1;
+		left: 0;
+		@include rotate (0);
+		@include transition(0.15s ease-in-out);
+		&:nth-child(1) { top: 4px; }
+		&:nth-child(2), &:nth-child(3) { top: 16.5px; }
+		&:nth-child(4) { top: 30px; }
+	}
+	&.open span{
+		&:nth-child(1), &:nth-child(4) { top: 18px; width: 0%; left: 50%; }
+		&:nth-child(2) { 
+			@include rotate (45);
+		}
+		&:nth-child(3) { 
+			@include rotate (-45);
+		}
+	}
+}
+
+
+
+
+
+// LANDING Section
+#landing{
+	height: 100%;
+	position: relative;
+	.landing-box { 
+		color: $white;
+		@include flexbox;
+		@include align-items(center);
+		@include justify-content(center);
+		@include flex-direction(column);
+		.intro-box {
+			width: 100%; height: 100%;
+			@include flexbox;
+			@include align-items(center);
+			.intro { 
+				margin-top: 5em;
+				@include for-size(tablet-landscape-down) { 
+					width: 100%; 
+					text-align: center;
+					@include flexbox;
+					@include justify-content(center);
+					@include align-items(center);
+					@include flex-direction(column);
+				}
+				@include for-size(desktop-only) { width: 79%; }
+				@include for-size(large-desktop-only) { width: 66%; }
+				@include for-size(xl-desktop-up) { width: 66%; h1 { font-size: 9.4rem; } }
+				.intro-line{
+					height: 2px;
+					// width: 50%;
+					background-color: $primary;
+					margin: 1em 0;
+				}
+				[data-aos="intro-line"] {
+				  // transform: skewX(45deg);
+				  width: 0%;
+				  opacity: 0;
+				  transition-property: width, opacity;
+				  &.aos-animate {
+				    width: 50%;
+				    opacity: 1;
+				  }
+				}
+			}
+		}
+		.down-scroll-box{
+			padding-bottom: 1em;
+			.down-scroll {
+				@include flexbox;
+				@include justify-content(center);
+				@include align-items(center);
+				@include flex-direction(column);
+				color: $white-2s;
+				&:hover { cursor: pointer; @include opacity(0.6) }
+				
+				img { height: 20px;}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+// ABOUT US Sectiom
+#aboutUs {
+	height: 100%;
+	@include for-size(tablet-landscape-down) { padding: 4em 0; }
+	@include for-size(phone-only) { padding: 15em 0; }
+	background-color: $white;
+	.wrapper{
+		height: 100%; width: 100%;
+		@include flexbox;
+		@include justify-content(space-around);
+		@include align-items(center);
+		.container{
+			padding-top: 4em 0;
+			height: auto;
+			text-align: center;
+			@include flexbox;
+			@include justify-content(space-between);
+			@include align-items(center);
+			@include flex-direction(column);
+			max-width: 860px;
+			#vismis-box{
+				margin-top: 1em;
+				width: 100%;
+				height: 100%;
+				@include flexbox;
+				@include for-size(tablet-landscape-down) { @include flex-direction(column); }
+				.vismis{
+					height: 100%;
+					width: 50%;
+					margin: 1em 0.5em;
+					padding: 1.5em 1em;
+					text-align: center;
+					background-color: $grey-6s;
+					@include border-radius(6px);
+					@include for-size(tablet-landscape-down) {
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+	.title { text-transform: uppercase; color: $primary; }
+	h5.title { color: $secondary; }
+}
+
+
+// ABOUT US Sectiom
+#kyoo {
+	height: 100%;
+	@include for-size(tablet-landscape-down) { padding: 4em 0; }
+	@include for-size(phone-only) { padding: 15em 0; }
+	// @include gradient-bg($kyoo-b, $kyoo-a);
+	background-color: white;
+	.wrapper{
+		height: 100%; width: 100%;
+		@include flexbox;
+		@include justify-content(center);
+		@include align-items(flex-start);
+		.container{
+			margin-top: 10em;
+			height: 100%;
+			// @include border(red, 3px);
+			position: relative;
+			@include flexbox;
+			@include justify-content(center);
+			.product-content {
+				background-image: url('../assets/images/kyoo-bg.png');
+				@include background-size(contain);
+				background-position: 0% 20%;
+				background-repeat: no-repeat;
+				position: relative;
+				width: 100%;
+				text-align: right;
+				padding-top: 2em;
+				@include flexbox;
+				@include flex-direction(column);
+				@include align-items(flex-end);
+				.title h3{ color: $grey-1;}
+				.product-logo img { 
+					width: 360px; margin-bottom: 1em;
+					@include for-size(tablet-landscape-down) { width: 100%; }
+					@include for-size(desktop-only) { width: 320px; }
+					// @include for-size(large-desktop-only) { width: 60%; }
+				}
+				.product-desc { 
+					margin-bottom: 1.5em;
+					width: 46%;
+					@include for-size(tablet-landscape-only) { width: 70%; }
+					@include for-size(desktop-only) { width: 50%; }
+					@include for-size(large-desktop-only) { width: 48%; }
+				}
+				.product-button{
+					cursor: pointer;
+					position: absolute;
+					z-index: 80;
+					right: 0;
+				}
+			}
+			.device-box{
+				@include align-self(flex-end);
+				width: 100%;
+				position: absolute;
+				z-index: 50;
+				.img-device{
+					width: 70%;
+					@include for-size(tablet-landscape-down) { width: 100%; }
+					@include for-size(desktop-only) { width: 58%; }
+					@include for-size(large-desktop-only) { width: 60%; }
+				}
+			}
+
+			@include for-size(xl-desktop-up) {
+				.product-content {
+					.product-logo img { width: 400px; }
+					.product-desc { width: 45%; }
+				}
+				.device-box{
+					.img-device { width: 60%; }
+				}
+			}
+		}
+	}
+}
+
+// CSS BREAKPOINTS
+// phone-only             max-width: 599px
+// tablet-portrait-up     min-width: 600px
+// tablet-portrait-only   min-width: 600px && max-width: 899px
+// tablet-landscape-down  max-width: 899px
+// tablet-landscape-up    min-width: 900px
+// tablet-landscape-only  min-width: 900px && max-width: 1199px
+// desktop-down           max-width: 1199px
+// desktop-up             min-width: 1200px
+// desktop-only     	  min-width: 1199px && max-width: 1499px
+// large-desktop-down     max-width: 1499px
+// large-desktop-up	      min-width: 1500px
+// large-desktop-only     min-width: 1499px && max-width: 1799px
+// xl-desktop-up		  min-width: 1800px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

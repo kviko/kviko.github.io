@@ -20,9 +20,11 @@
     table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
     img { -ms-interpolation-mode: bicubic; }
     .button-box { width: 100%; max-width: 320px;}
+    .image-box { width: 160px; height: 140px;}
+    .image-banner { width: auto; height: 300px;}
     a:hover {cursor: pointer; opacity: 0.6;}
-    *[class="mobileOff"] { display: block !important; max-height:none !important; width: auto !important; }
-    *[class="mobileOn"] {  width: 0px !important; display: none !important; }
+    .mobileOff { display: block !important; max-height:none !important; width: auto !important; }
+    .mobileOn {  width: 0px !important; display: none !important; }
 
     /* RESET STYLES */
     img { border: 0; outline: none; text-decoration: none; }
@@ -50,11 +52,14 @@
     @media all and (max-width:639px){ 
       .wrapper{ width:320px!important; padding: 0 !important; }
       .container{ width:300px!important; padding: 0 !important; }
-      .mobile{ width:260px!important; display:block!important; padding: 0 !important; }
+      .mobile-1 { width:260px!important; display:block!important; padding: 0 !important; }
+      .mobile-2 { width:300px!important; display:block!important; padding: 0 !important; }
       .img{ width:100% !important; height:auto !important; }
+      .image-box { min-height: 140px;}
+      .image-banner { min-height: 260px;}
       .imgBadge{ width:140px !important; height:auto !important; }
-      *[class="mobileOff"] { width: 0px !important; display: none !important; }
-      *[class="mobileOn"] { display: block !important; max-height:none !important; width: auto !important; }
+      .mobileOff { width: 0px !important; display: none !important; }
+      .mobileOn { display: block !important; max-height:none !important; width: auto !important; }
     }
 
   </style>    
@@ -68,7 +73,8 @@
           <!-- START CONTENT -->
 
 
-
+     <!-- ############# DEV NOTES ##############
+          This is the Kyoo Logo. Don't edit --> 
           <!-- START Header -->
           <table width="600" cellpadding="0" cellspacing="0" border="0" class="wrapper" bgcolor="#FFFFFF">
             <tr><td height="30" style="font-size:30px; line-height:30px;" class="spacing">&nbsp;</td></tr>
@@ -84,6 +90,10 @@
             <tr><td height="30" style="font-size:30px; line-height:30px;" class="spacing">&nbsp;</td></tr>
           </table>
           <!-- END Header -->
+
+
+
+
           <!-- START Intro -->
           <table width="600" cellpadding="0" cellspacing="0" border="0" class="wrapper" bgcolor="#FFFFFF">
             <!-- START Intro Content -->
@@ -101,7 +111,7 @@
                   <p>
                     Hey <span style="font-weight: bold">
                <!-- ############# DEV NOTES ##############
-                    ▼▼▼ Enter client/customer ▼▼▼ --> 
+                    ▼▼▼ Enter client/customer name ▼▼▼ --> 
                     Darryl</span>!
                   </br>
                <!-- ############# DEV NOTES ##############
@@ -114,6 +124,39 @@
           </table>
           <!-- END Intro -->
 
+
+
+
+     <!-- ############# DEV NOTES ##############
+          START IMAGE BANNER Section - This contains all the hero image of the email.
+          Hide this if not needed, just add:
+          - - - - - - - - - - - - - - - - - - - - - -
+            style="display: none"
+          - - - - - - - - - - - - - - - - - - - - - -
+          OR simply comment out or remove it lol
+          ▼▼▼ on this <table> tag bellow ▼▼▼ -->
+          <table width="600" cellpadding="0" cellspacing="0" border="0" class="wrapper" bgcolor="#FFFFFF">
+            <!-- START Image Banner Content -->
+            <tr><td align="center" valign="top">
+              <table width="512px" cellpadding="0" cellspacing="0" border="0" class="container">
+                <tr><td class="spacing" height="20" style="font-size:20px; line-height:20px;">&nbsp;</td></tr>
+                <!-- Start Banner -->
+                <tr><td align="center" valign="center">
+             <!-- ############# DEV NOTES ##############
+                  ▼▼▼ Change the background-image url with the merchants banner image ▼▼▼ -->
+                  <div class="image-banner img" style="
+                  background-image: url('assets/sample-1.jpg'); /* <--- Change This */
+                  background-position: center center;
+                  background-repeat: no-repeat;
+                  background-size: cover; 
+                  "></div>
+                </td></tr>
+                <!-- End Banner -->
+                </table>
+              </td></tr>
+              <!-- END Image Banner Content -->
+          </table>
+          <!-- END Image Banner -->
 
 
 
@@ -133,52 +176,52 @@
               <table width="512px" cellpadding="0" cellspacing="0" border="1" class="container" bgcolor="#FFFFFF" style="border-color: #D4D4D4; border-collapse: separate; border-radius:6px; -moz-border-radius: 6px;">
                 <tr>
                   <td align="center" valign="top" style="padding-top: 16px; padding-bottom: 16px;">
-                    <table width="" cellpadding="10" cellspacing="0" border="0">
+                    <table width="90%" cellpadding="10" cellspacing="0" border="0">
                       <tr>
-                        <td class="mobile" align="left" valign="center" style="font-weight: bold;">
+                        <td class="mobile-1" align="left" valign="center" style="font-weight: bold;">
                      <!-- ############# DEV NOTES ##############
                           LABEL. Edit this --> Changes
                         </td>
-                        <td class="mobile" align="left" valign="center" data-label="Changes"><!-- Please change the data-label of the row based on the Label -->
+                        <td class="mobile-1" align="left" valign="center" data-label="Changes"><!-- Please change the data-label of the row based on the Label -->
                      <!-- ############# DEV NOTES ##############
                           VALUE. Edit this --> Account Name, Address, Mobile Number
-                          <span height="16" style="font-size:16px; line-height:16px;" class="spacing mobile mobileOn">&nbsp;</span>
+                          <span height="16" style="font-size:16px; line-height:16px;" class="spacing mobile-1 mobileOn">&nbsp;</span>
                         </td>
                       </tr>
                       
                       <tr>
-                        <td class="mobile" align="left" valign="center" style="font-weight: bold;">
+                        <td class="mobile-1" align="left" valign="center" style="font-weight: bold;">
                      <!-- ############# DEV NOTES ##############
                           LABEL. Edit this --> Date
                         </td>
-                        <td class="mobile" align="left" valign="center" data-label="Date"><!-- Please change the data-label of the row based on the Label -->
+                        <td class="mobile-1" align="left" valign="center" data-label="Date"><!-- Please change the data-label of the row based on the Label -->
                      <!-- ############# DEV NOTES ##############
                           VALUE. Edit this --> Aug. 29, 2018, 10:02AM
-                          <span height="16" style="font-size:16px; line-height:16px;" class="spacing mobile mobileOn">&nbsp;</span>
+                          <span height="16" style="font-size:16px; line-height:16px;" class="spacing mobile-1 mobileOn">&nbsp;</span>
                         </td>
                       </tr>
 
                       <tr>
-                        <td class="mobile" align="left" valign="center" style="font-weight: bold;">
+                        <td class="mobile-1" align="left" valign="center" style="font-weight: bold;">
                      <!-- ############# DEV NOTES ##############
                           LABEL. Edit this --> Location
                         </td>
-                        <td class="mobile" align="left" valign="center" data-label="Location"><!-- Please change the data-label of the row based on the Label -->
+                        <td class="mobile-1" align="left" valign="center" data-label="Location"><!-- Please change the data-label of the row based on the Label -->
                      <!-- ############# DEV NOTES ##############
                           VALUE. Edit this --> Manila, Philippines
-                          <span height="16" style="font-size:16px; line-height:16px;" class="spacing mobile mobileOn">&nbsp;</span>
+                          <span height="16" style="font-size:16px; line-height:16px;" class="spacing mobile-1 mobileOn">&nbsp;</span>
                         </td>
                       </tr>
 
                       <tr>
-                        <td class="mobile" align="left" valign="center" style="font-weight: bold;">
+                        <td class="mobile-1" align="left" valign="center" style="font-weight: bold;">
                      <!-- ############# DEV NOTES ##############
                           LABEL. Edit this --> Device Type
                         </td>
-                        <td class="mobile" align="left" valign="center" data-label="Device Type"><!-- Please change the data-label of the row based on the Label -->
+                        <td class="mobile-1" align="left" valign="center" data-label="Device Type"><!-- Please change the data-label of the row based on the Label -->
                      <!-- ############# DEV NOTES ##############
                           VALUE. Edit this --> iPhone X iOS 11.2.3
-                          <span height="10" style="font-size:10px; line-height:10px;" class="spacing mobile mobileOn">&nbsp;</span>
+                          <span height="10" style="font-size:10px; line-height:10px;" class="spacing mobile-1 mobileOn">&nbsp;</span>
                         </td>
                       </tr>
                     </table>
@@ -250,11 +293,10 @@
 
 
 
-
           <!-- 
           ############# DEV NOTES ##############
           FOOTER remain as is - POLICE LINE, DO NOT CROSS
-          START Footer -->
+          START Footer for Template 1 -->
           <table width="600" cellpadding="0" cellspacing="0" border="0" class="wrapper" bgcolor="#FFFFFF">
             <!-- START Footer Content -->
             <tr><td align="center" valign="top">
