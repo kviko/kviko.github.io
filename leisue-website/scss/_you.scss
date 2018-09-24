@@ -94,6 +94,7 @@ body {
 }
 section { 
 	width: 100%; 
+	min-height: 100vh; 
 	@include for-size(large-desktop-down) {
 		min-height: 100vh; height: auto; 
 	}
@@ -238,7 +239,8 @@ input[type="button"] {
     input[type="reset"].botton-kyoo,
     input[type="button"].botton-kyoo {
 		color: #FFF;
-		background-color: $kyoo-a; }
+		background-color: $kyoo-a;
+		@include gradient-bg($kyoo-a, $kyoo-b); }
 		.button.botton-kyoo:hover, .button.botton-kyoo:focus,
 		button.botton-kyoo:hover,
 		button.botton-kyoo:focus,
@@ -249,6 +251,8 @@ input[type="button"] {
 		input[type="button"].botton-kyoo:hover,
 		input[type="button"].botton-kyoo:focus {
 		background-color: $kyoo-b;
+		// @include gradient-bg($kyoo-b, $kyoo-a);
+		@include gradient-bg($kyoo-a, $kyoo-b);
 	    -webkit-box-shadow: 0 12px 24px 0 rgba($kyoo-a, 0.35);
 	    -moz-box-shadow: 0 12px 24px 0 rgba($kyoo-a, 0.35);
 	    box-shadow: 0 12px 24px 0 rgba($kyoo-a, 0.35); 

@@ -36,7 +36,7 @@ footer#footer{
 		@include align-items(center);
 	}
 }
-.link-2 { color: $secondary-light; &:hover{ color: $primary; } }
+.link-2 { color: $secondary-light; @include transition(all 0.3s ease-out); &:hover{ color: $white; } }
 
 
 
@@ -243,7 +243,7 @@ nav, .nav {
 	height: 100%;
 	@include for-size(large-desktop-down) { padding: 2em 0 0; }
 	@include for-size(tablet-landscape-down) { padding: 4em 0 0; }
-	@include for-size(phone-only) { padding: 5em 0 0; }
+	@include for-size(phone-only) { padding: 6em 0 0; }
 	background-color: $white;
 	.wrapper{
 		height: 100%; width: 100%;
@@ -290,13 +290,23 @@ nav, .nav {
 // ABOUT US Sectiom
 #kyoo {
 	height: 100%;
-	border: 1px solid blue;
+	// border: 1px solid blue;
 	@include for-size(large-desktop-down) { padding: 2em 0 0; }
 	@include for-size(tablet-landscape-down) { padding: 4em 0 0; }
 	@include for-size(phone-only) { padding: 5em 0 0; }
 	// @include gradient-bg($kyoo-b, $kyoo-a);
 	background-color: white;
 	.wrapper{
+		background-image: url('../assets/images/kyoo-bg.png');
+		@include for-size(tablet-landscape-up) { 
+			@include background-size(contain);
+			background-position: center 20%;
+		}
+		@include for-size(tablet-landscape-down) { 
+			@include background-size(cover);
+			background-position: center center;
+		}
+		background-repeat: no-repeat;
 		height: 100%; width: 100%;
 		@include flexbox;
 		@include justify-content(center);
@@ -306,11 +316,10 @@ nav, .nav {
 			position: relative;
 			@include flexbox;
 			@include justify-content(center);
+			@include for-size(tablet-landscape-down) { 
+				margin-bottom: 10em;
+			}
 			.product-content {
-				background-image: url('../assets/images/kyoo-bg.png');
-				@include background-size(contain);
-				background-position: 0% 20%;
-				background-repeat: no-repeat;
 				position: relative;
 				width: 100%;
 				text-align: right;
@@ -318,18 +327,34 @@ nav, .nav {
 				@include flexbox;
 				@include flex-direction(column);
 				@include align-items(flex-end);
-				.title h3{ color: $grey-1;}
+				@include for-size(tablet-landscape-down) { 
+					margin-top: 10em;
+					margin-bottom: 10em;
+					@include justify-content(center);
+					@include align-items(center);
+					text-align: center;
+				}
+				.title h3{
+					color: $grey-1;
+					@include for-size(tablet-landscape-down) { margin-bottom: 1em; }
+				}
+				.img-device-mobile{
+					width: 70%;
+					margin-bottom: 2em; 
+					@include for-size(tablet-landscape-up) { display: none; }
+				}
 				.product-logo img { 
 					width: 360px; margin-bottom: 1em;
-					@include for-size(tablet-landscape-down) { width: 100%; }
 					@include for-size(desktop-only) { width: 320px; }
+					@include for-size(tablet-landscape-down) { width: 42%; }
+					@include for-size(phone-only) { width: 60%; }
 					// @include for-size(large-desktop-only) { width: 60%; }
 				}
 				.product-desc { 
 					margin-bottom: 1.5em;
 					width: 46%;
-					border: 1px solid orange;
-					@include for-size(tablet-landscape-down) { width: 100%; }
+					// border: 1px solid orange;
+					@include for-size(tablet-landscape-down) { width: 100%; margin-bottom: 2em; }
 					@include for-size(desktop-only) { width: 40%; }
 					@include for-size(large-desktop-only) { width: 48%; }
 				}
@@ -338,19 +363,28 @@ nav, .nav {
 					position: absolute;
 					z-index: 80;
 					right: 0;
+					@include for-size(tablet-landscape-down) {
+						position: static;
+						margin-bottom: 10em;
+					}
 				}
 			}
 			.device-box{
-				@include border(red, 3px);
+				// @include border(red, 3px);
 				@include align-self(flex-end);
 				width: 100%;
 				position: absolute;
 				z-index: 50;
 				.img-device{
 					width: 70%;
-					@include for-size(tablet-landscape-down) { width: 100%; }
+					@include for-size(tablet-landscape-down) { display: none; }
+					@include for-size(desktop-down) { width: 56%; }
 					@include for-size(desktop-only) { width: 58%; }
 					@include for-size(large-desktop-only) { width: 60%; }
+				}
+				.img-device-mobile{
+					width: 70%;
+					@include for-size(tablet-landscape-up) { display: none; }
 				}
 			}
 
@@ -381,6 +415,68 @@ nav, .nav {
 // large-desktop-up	      min-width: 1500px
 // large-desktop-only     min-width: 1499px && max-width: 1799px
 // xl-desktop-up		  min-width: 1800px
+
+
+
+
+
+#homeTeam{
+	background-color: $secondary;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
