@@ -94,7 +94,7 @@ body {
 }
 section { 
 	width: 100%; 
-	@include for-size(tablet-landscape-down) {
+	@include for-size(large-desktop-down) {
 		min-height: 100vh; height: auto; 
 	}
 }
@@ -123,6 +123,8 @@ h6 { font-size: 1.4rem; line-height: 1.4;	font-weight: 700;	text-transform: uppe
 // Body
 p  { font-size: 2.0rem; line-height: 1.8; font-weight: 400;}
 small{ font-size: 1.4rem; line-height: 1.4;	font-weight: 700;}
+// Desktop Size - max-width: 1499px
+@include for-size(large-desktop-down) { p  { font-size: 1.8rem; } }
 // Tablet landscape Size - max-width: 899px
 @include for-size(tablet-landscape-down) {
   h1 { font-size: 5.0rem; }
@@ -131,7 +133,7 @@ small{ font-size: 1.4rem; line-height: 1.4;	font-weight: 700;}
   h4 { font-size: 2.0rem; }
   h5 { font-size: 1.8rem; }
   h6 { font-size: 1.2rem; }
-  p  { font-size: 1.8rem; }
+  p  { font-size: 1.6rem; }
   small { font-size: 1.0rem;}
 }
 // Text Classes
