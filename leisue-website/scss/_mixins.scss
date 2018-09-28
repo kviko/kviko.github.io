@@ -250,6 +250,19 @@
 
 
 
+// BG COLOR
+@mixin background-color($bgColor){
+  -webkit-background-color: $bgColor;
+  -moz-background-color: $bgColor;
+  -o-background-color: $bgColor;
+  background-color: $bgColor;
+}
+
+
+
+
+
+
 // OPACITY
 @mixin opacity($opacity) {
   opacity: $opacity;

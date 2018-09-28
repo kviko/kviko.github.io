@@ -84,7 +84,7 @@ html, body{
 html is set to 62.5% so that all the REM measurements throughout
 are based on 10px sizing. So basically 1.5rem = 15px :) */
 html { font-size: 62.5%; }
-body { 
+body{ 
 	font-size: 1.8rem; /* currently ems cause chrome bug misinterpreting rems on body element */
 	line-height: 1.4;
 	font-weight: 400;
@@ -97,6 +97,9 @@ section {
 	min-height: 100vh; 
 	@include for-size(large-desktop-down) {
 		min-height: 100vh; height: auto; 
+	}
+	&.height-auto{
+		min-height: auto; height: auto; 
 	}
 }
 * { &:focus{ outline: none; } }
@@ -135,7 +138,7 @@ small{ font-size: 1.4rem; line-height: 1.4;	font-weight: 700;}
   h5 { font-size: 1.8rem; }
   h6 { font-size: 1.2rem; }
   p  { font-size: 1.6rem; }
-  small { font-size: 1.0rem;}
+  small { font-size: 1.2rem;}
 }
 // Text Classes
 .lowercase { text-transform: lowercase;}

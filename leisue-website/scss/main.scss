@@ -13,6 +13,9 @@
 	@include align-items(center);
 	.container { 
 		height: 100%; width: 80%; 
+		&.container-fluid{
+			width: 100%; 
+		}
 		@include for-size(tablet-landscape-down) { width: 94%; }
 		@include for-size(phone-only) { width: 92%; }
 	}
@@ -29,16 +32,142 @@ footer#footer{
 	font-size: 1.4rem; 
 	color: $white;
 	background-color: $secondary;
-	.container { 
-		height: 50px;
+	color: $grey-2;
+	.wrapper { 
+		// height: 50px;
 		@include flexbox;
-		@include justify-content(space-between);
 		@include align-items(center);
+		@include flex-direction(column);
+
+		.footer-top {
+			width: 100%;
+			@include background-color($secondary-dark);
+			.container {
+				padding: 4rem 0;
+				@include flexbox;
+				@include justify-content(space-between);
+
+				@include for-size(tablet-landscape-down) {
+					@include flex-direction(column);
+					padding: 4rem 0 2em;
+				}
+				.footer-box {
+					// border: 1px solid red;
+					width: 100%;
+					@include flexbox;
+					@include for-size(tablet-landscape-down) {
+						margin-bottom: 2em; 
+						// &:last-child{ margin-bottom: 3em; }
+					}
+					@include for-size(phone-only) {
+						// @include flex-direction(column);
+					}
+					.footer-item {
+						width: 100%;
+						@include flexbox;
+						@include flex-direction(column);
+						@include align-items(flex-start);
+						height: auto;
+						@include for-size(phone-only) {
+							margin-bottom: 2em;
+							&:last-child{ margin-bottom: 0em; }
+						}
+						// @include transition(all 0.3s ease-out); 
+						h6 {color: $white; }
+						a, span { margin-bottom: 0.6em; }
+						& :last-child{ margin-bottom: 0; }
+
+						&.address {
+							margin-right: 2em; max-width: 200px;
+							.address-box {max-width: none;}
+							@include for-size(tablet-landscape-down) { 
+								margin-right: 2em; max-width: none;
+								.address-box {max-width: 300px; }
+							}
+						}
+
+						&.social img {
+							@include transition(all 0.3s ease-out); 
+							height: 24px; width: 24px;
+							margin-right: 1rem;
+							@include opacity(0.4);
+							&:hover{@include opacity(1);}
+							@include for-size(tablet-landscape-down) { height: 36px; width: 36px; margin-right: 2rem;}
+						}
+						&.links { }
+						&.products { }
+						&.footer-leisue {
+							@include flexbox;
+							@include flex-direction(row);
+							@include align-items(center);
+							margin-right: 2em;
+							max-width: 420px;
+							img.footer-logo-1 { display: inline; width: 80px; height: auto; margin-right: 2em; }
+							img.footer-logo-2 { display: none }
+							@include for-size(desktop-down) {
+								@include flex-direction(column);
+								@include align-items(flex-start);
+								img.footer-logo-1, h6 { display: none }
+								img.footer-logo-2 { display: inline; width: auto; height: 50px; margin-bottom: 1em; }
+							}
+							@include for-size(tablet-landscape-down) {
+								@include flex-direction(row);
+								img.footer-logo-2 { margin-right: 2em; }
+								max-width: none;
+							}
+							@include for-size(phone-only) {
+								margin-right: 0em;
+								@include flex-direction(column);
+								@include align-items(flex-start);
+								img.footer-logo-1, h6 { display: none }
+								img.footer-logo-2 { display: inline; width: auto; height: 50px; margin-bottom: 1em; }
+							}
+						}
+					}
+				}
+				.footer-1 { @include for-size(tablet-landscape-down) { @include order(3);} margin-bottom: 0em; }
+				.footer-2 { @include for-size(tablet-landscape-down) { @include order(1);} }
+				.footer-3 { @include for-size(tablet-landscape-down) { @include order(2);} }
+			}
+		}
+		.footer-bot {
+			height: 60px;
+			width: 100%;
+			@include background-color($grey-1);
+			.container {
+				@include flexbox;
+				@include justify-content(space-between);
+				@include align-items(center);
+			}
+		}
+	}
+} 
+
+
+// PARALLAX BG
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+
+// LINK Style
+.link-1 {
+	color: inherit;
+	@include transition(all 0.3s ease-out); 
+	border-bottom: 1px solid $secondary-light;
+	@include border-radius(1px); 
+	&:hover { 
+		color: $white;
+		border-bottom: 1px solid $primary; 
 	}
 }
-.link-2 { color: $secondary-light; @include transition(all 0.3s ease-out); &:hover{ color: $white; } }
-
-
+.link-2 { 
+	color: inherit; 
+	@include transition(all 0.3s ease-out); 
+	&:hover { 
+		color: $white!important; 
+	} 
+}
 
 
 // NAVIGATION BAR
@@ -251,7 +380,7 @@ nav, .nav {
 		@include justify-content(space-around);
 		@include align-items(center);
 		.container{
-			padding-top: 4em 0;
+			padding-top: 4em;
 			height: auto;
 			text-align: center;
 			@include flexbox;
@@ -282,21 +411,22 @@ nav, .nav {
 			}
 		}
 	}
-	.title { text-transform: uppercase; color: $primary; }
 	h5.title { color: $secondary;}
 }
 
+.title { text-transform: uppercase; color: $primary; }
 
 // ABOUT US Sectiom
 #kyoo {
 	height: 100%;
 	// border: 1px solid blue;
 	@include for-size(large-desktop-down) { padding: 2em 0 0; }
-	@include for-size(tablet-landscape-down) { padding: 4em 0 0; }
-	@include for-size(phone-only) { padding: 5em 0 0; }
+	@include for-size(tablet-landscape-down) { padding: 0; height: auto }
+	@include for-size(phone-only) { padding: 4em 0 0; }
 	// @include gradient-bg($kyoo-b, $kyoo-a);
 	background-color: white;
 	.wrapper{
+		// @include border(1px, red);
 		background-image: url('../assets/images/kyoo-bg.png');
 		@include for-size(tablet-landscape-up) { 
 			@include background-size(contain);
@@ -305,6 +435,8 @@ nav, .nav {
 		@include for-size(tablet-landscape-down) { 
 			@include background-size(cover);
 			background-position: center center;
+			// margin-top: 5em;
+			// margin-bottom: 10em;
 		}
 		background-repeat: no-repeat;
 		height: 100%; width: 100%;
@@ -312,14 +444,16 @@ nav, .nav {
 		@include justify-content(center);
 		@include align-items(flex-start);
 		.container{
+			// @include border(1px, blue);
 			height: 100%;
 			position: relative;
 			@include flexbox;
 			@include justify-content(center);
 			@include for-size(tablet-landscape-down) { 
-				margin-bottom: 10em;
+				// margin-bottom: 10em;
 			}
 			.product-content {
+				// @include border(1px, green);
 				position: relative;
 				width: 100%;
 				text-align: right;
@@ -328,8 +462,8 @@ nav, .nav {
 				@include flex-direction(column);
 				@include align-items(flex-end);
 				@include for-size(tablet-landscape-down) { 
-					margin-top: 10em;
-					margin-bottom: 10em;
+					// margin-top: 10em;
+					// margin-bottom: 10em;
 					@include justify-content(center);
 					@include align-items(center);
 					text-align: center;
@@ -401,35 +535,221 @@ nav, .nav {
 	}
 }
 
-// CSS BREAKPOINTS
-// phone-only             max-width: 599px
-// tablet-portrait-up     min-width: 600px
-// tablet-portrait-only   min-width: 600px && max-width: 899px
-// tablet-landscape-down  max-width: 899px
-// tablet-landscape-up    min-width: 900px
-// tablet-landscape-only  min-width: 900px && max-width: 1199px
-// desktop-down           max-width: 1199px
-// desktop-up             min-width: 1200px
-// desktop-only     	  min-width: 1199px && max-width: 1499px
-// large-desktop-down     max-width: 1499px
-// large-desktop-up	      min-width: 1500px
-// large-desktop-only     min-width: 1499px && max-width: 1799px
-// xl-desktop-up		  min-width: 1800px
-
-
-
-
 
 #homeTeam{
-	background-color: $secondary;
+	background-color: $secondary-light;
 }
 
 
+.filter{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	background-color: rgba(0,0,0,0.70);;
+}
+
+// TEAMS
+#teamTop {
+	min-height: auto;
+	height: 500px;
+	background-color: $grey-5;
+	@include for-size(tablet-landscape-down) { height: 420px }
+	@include for-size(phone-only) { height: 380px }
+	.wrapper {
+		position: relative;
+		background-image: url('../assets/images/team_cover.jpg');
+		@include background-size(cover);
+		background-position: 50% 50%;
+	    background-repeat: no-repeat; 
+	    // background-attachment: fixed;
+	}
+	.container {
+		@include flexbox;
+		@include justify-content(center);
+		@include align-items(center);
+		@include flex-direction(column);
+		max-width: 860px;
+		text-align: center;
+		margin-top: 2em;
+		color: $white;
+		position: absolute;
+		z-index: 10;
+	}
+}
+#teamContent {
+	min-height: 100vh; height: auto;
+	.container {
+		padding: 4em 0;
+		height: auto;
+		text-align: center;
+		@include flexbox;
+		@include justify-content(center);
+		@include align-items(center);
+		@include flex-direction(column);
+		.team-title { margin-bottom: 4em; }
+	}
+}
+.people {
+	width: 100%;
+	@include flexbox;
+	@include justify-content(space-between);
+	@include flex-wrap(wrap);
+	.person {
+		position: relative;
+		margin-bottom: 6em;
+		@include flexbox;
+		@include justify-content(space-between);
+		@include align-items(center);
+		@include flex-direction(column);
+		width: 32%;
+		min-height: 380px;
+		@include for-size(tablet-landscape-down) { 
+			width: 48%;
+			min-height: 380px;
+			margin-bottom: 6em;
+		}
+		@include for-size(phone-only) { width: 100%; margin-bottom: 2em; }
+		.emp-photo {
+			background-color: $secondary-light;
+			margin-bottom: 1em;
+			width: 100%;
+			min-height: 360px;
+			position: relative;
+			display: inline-block;
+			overflow: hidden;
+			.linkedin-box{
+				@include transition(all 0.2s ease-in-out); 
+				position: absolute;
+				z-index: 10;
+				bottom: -100px;
+				padding: 16px;
+				a {
+					@include flexbox;
+					@include justify-content(center);
+					@include align-items(center);
+				}
+				.linkedin{
+					@include transition(all 0.3s ease-out); 
+					width: 30px;
+					height: auto;
+					margin-right: 0.5em;
+					@include box-shadow(0px,4px,10px,1px,rgba(#000,0.1));
+				}
+				small {
+					color: $white;
+					font-weight: 400;
+					margin: 0;
+				}
+				&:hover { 
+					@include opacity(0.5);
+				}
+			}
+			.front { 
+				object-fit: cover;
+				height: 100%;
+				width: auto;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				-webkit-transform: translate(-50%,-50%);
+				-ms-transform: translate(-50%,-50%);
+				transform: translate(-50%,-50%);
+			} &:hover { 
+				img.front { display: none; } 
+				.linkedin-box { bottom: 0; }
+			}
+			.slides{
+				height: 360px;
+				width: 100%;
+				padding: 0;
+				margin: 0;
+			    list-style: none;
+			    visibility: hidden;
+			    position: relative;
+				&.active {
+				    visibility: visible;
+				}
+				li {
+					width: 100%; height: 360px;
+					position: relative;
+					overflow: hidden;
+					background-color: #FFF;
+					img { 
+				    	width: auto; 
+				    	height: 100%;
+				    	object-fit: cover;
+				    	position: absolute;
+				    	top: 50%;
+				    	left: 50%;
+				    	-webkit-transform: translate(-50%,-50%);
+				    	-ms-transform: translate(-50%,-50%);
+				    	transform: translate(-50%,-50%);
+				    }
+				}
+			}
+		}
+		.emp-details{
+			@include flexbox;
+			@include justify-content(center);
+			@include align-items(center);
+			@include flex-direction(column);
+			.name {
+				text-transform: uppercase;
+				margin-bottom: 0.3em;
+				font-weight: 900;
+				line-height: 20px;
+				@include for-size(tablet-landscape-down) {
+					margin-bottom: 0.2em;
+				}
+			}
+			small { font-weight: 400; color: $grey-2; font-style: italic; margin-bottom: 0.5em;}
+			img.linkedin { 
+				display: none;
+				@include transition(all 0.3s ease-out); 
+				width: 20px;
+				height: auto;
+				filter: grayscale(100%);
+				&:hover { 
+					filter: grayscale(0%);
+				}
+			}
+		}
+	}
+}
 
 
-
-
-
+// CAREERS
+.cover-top {
+	min-height: auto;
+	height: 500px;
+	background-color: $grey-5;
+	@include for-size(tablet-landscape-down) { height: 420px }
+	@include for-size(phone-only) { height: 380px }
+	.wrapper {
+		position: relative;
+		@include background-size(cover);
+		background-position: 50% 50%;
+	    background-repeat: no-repeat; 
+	    &#teamTop { background-image: url('../assets/images/top-team.jpg'); }
+	    &#careerTop { background-image: url('../assets/images/top-career.jpg'); }
+	}
+	.container {
+		@include flexbox;
+		@include justify-content(center);
+		@include align-items(center);
+		@include flex-direction(column);
+		max-width: 860px;
+		text-align: center;
+		margin-top: 2em;
+		color: $white;
+		position: absolute;
+		z-index: 10;
+		.top-text {
+			font-weight: 100;
+		}
+	}
+}
 
 
 
