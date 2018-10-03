@@ -58,8 +58,11 @@ $primary-dark:		#C20921; // Venetian Red
 $secondary:			#464547; // Outer Space
 $secondary-light:	#787779; // Sonic Silver
 $secondary-dark:	#2D2C2E; // Onyx
+$grey-leisue:		#cbcfd3;
 $kyoo-a:			#FE7401;
 $kyoo-b:			#FE8F02;
+$talkm-a:			#0066FF;
+$talkm-b:			#0054D1;
 // Sub Colors
 $green:				#28A745;	$green-light: lighten($green, 40%);		$green-dark: darken($green, 12%);
 $red:				#DC3545;	$red-light: lighten($red, 40%);			$red-dark: darken($red, 12%);
@@ -125,8 +128,14 @@ h4 { font-size: 2.4rem; line-height: 1.35; 	font-weight: 400; }
 h5 { font-size: 2.0rem; line-height: 1.4; 	font-weight: 700; }
 h6 { font-size: 1.4rem; line-height: 1.4;	font-weight: 700;	text-transform: uppercase; }
 // Body
-p  { font-size: 2.0rem; line-height: 1.8; font-weight: 400;}
-small{ font-size: 1.4rem; line-height: 1.4;	font-weight: 700;}
+p  {
+	font-size: 2.0rem;
+	line-height: 1.8;
+	font-weight: 400;
+	&.large { font-size: 3.0rem; line-height: 1.6; font-weight: 100; }
+	&.type-1 { font-family: "Montserrat", Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,Oxygen-Sans, Ubuntu, Cantarell, sans-serif; }
+}
+small{ font-size: 1.4rem; line-height: 1.4;	font-weight: 300;}
 // Desktop Size - max-width: 1499px
 @include for-size(large-desktop-down) { p  { font-size: 1.8rem; } }
 // Tablet landscape Size - max-width: 899px
@@ -236,6 +245,31 @@ input[type="button"] {
       -moz-box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.15);
       box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.15); }
 
+     .button.botton-talkm,
+     button.botton-talkm,
+     input[type="submit"].botton-talkm,
+     input[type="reset"].botton-talkm,
+     input[type="button"].botton-talkm {
+ 		color: #FFF;
+ 		background-color: $talkm-a;
+ 		@include gradient-bg($talkm-a, $talkm-b); }
+ 		.button.botton-talkm:hover, .button.botton-talkm:focus,
+ 		button.botton-talkm:hover,
+ 		button.botton-talkm:focus,
+ 		input[type="submit"].botton-talkm:hover,
+ 		input[type="submit"].botton-talkm:focus,
+ 		input[type="reset"].botton-talkm:hover,
+ 		input[type="reset"].botton-talkm:focus,
+ 		input[type="button"].botton-talkm:hover,
+ 		input[type="button"].botton-talkm:focus {
+ 		background-color: $talkm-b;
+ 		// @include gradient-bg($talkm-b, $talkm-a);
+ 		@include gradient-bg($talkm-a, $talkm-b);
+ 	    -webkit-box-shadow: 0 12px 24px 0 rgba($talkm-a, 0.35);
+ 	    -moz-box-shadow: 0 12px 24px 0 rgba($talkm-a, 0.35);
+ 	    box-shadow: 0 12px 24px 0 rgba($talkm-a, 0.35); 
+     }
+
     .button.botton-kyoo,
     button.botton-kyoo,
     input[type="submit"].botton-kyoo,
@@ -261,6 +295,40 @@ input[type="button"] {
 	    box-shadow: 0 12px 24px 0 rgba($kyoo-a, 0.35); 
     }
 
+    .button.botton-leisue,
+    button.botton-leisue,
+    input[type="submit"].botton-leisue,
+    input[type="reset"].botton-leisue,
+    input[type="button"].botton-leisue {
+		color: #FFF;
+		background-color: $primary;
+		@include gradient-bg($primary, $primary-dark); }
+		.button.botton-leisue:hover, .button.botton-leisue:focus,
+		button.botton-leisue:hover,
+		button.botton-leisue:focus,
+		input[type="submit"].botton-leisue:hover,
+		input[type="submit"].botton-leisue:focus,
+		input[type="reset"].botton-leisue:hover,
+		input[type="reset"].botton-leisue:focus,
+		input[type="button"].botton-leisue:hover,
+		input[type="button"].botton-leisue:focus {
+		background-color: $primary-light;
+		// @include gradient-bg($primary-dark, $primary);
+		@include gradient-bg($primary, $primary-dark);
+	    -webkit-box-shadow: 0 12px 24px 0 rgba($primary-dark, 0.35);
+	    -moz-box-shadow: 0 12px 24px 0 rgba($primary-dark, 0.35);
+	    box-shadow: 0 12px 24px 0 rgba($primary-dark, 0.35); 
+    }
+
+        .button.disabled,
+        button.disabled,
+        input[type="submit"].disabled,
+        input[type="reset"].disabled,
+        input[type="button"].disabled {
+    		color: $grey-5;
+    		background-color: $grey-3;
+    	}
+
   .button.large,
   button.large,
   input[type="submit"].large,
@@ -273,10 +341,141 @@ input[type="button"] {
 	letter-spacing: 3px;
 	font-weight: 300;
 	font-size: 1.6rem;
+	@include flexbox;
+	@include justify-content(center);
+	@include align-items(center);
+	@include for-size(desktop-down) {
+		font-size: 1.3rem;
+		padding-top: 12px; 
+	}
+	@include for-size(large-desktop-down) {
+		font-size: 1.3rem;
+		padding-top: 18px; 
+	}
 }
 
 
+/* FORMS */
+// ------------------------------------------
+// Textbox
+.textbox-container{ margin-bottom: 1.6em; text-align: left!important;}
+.text-box {
+	background-color: transparent;
+	display: flex;
+	@include justify-content(flex-start);
+	@include align-items(center);
+	width: 100%;
+	min-width: 240px;
+	min-height: 54px;
+	padding: 0;
+	margin-bottom: 0.2rem;
+	@include border-radius(1px);
+	border-bottom: 2px solid $grey-4;
 
+	.text-icon { fill: $grey-1; flex-grow: 0; width: 16px; height: 16px; margin-right: 16px; }
+	&:focus-within{
+		border-bottom: 2px solid $black;
+		.text-icon{fill: $primary; transition: all .1s;}
+		label, > span { color: $primary; }
+	}
+	&.error{
+		border-bottom: 2px solid $primary;;
+		.text-icon{fill: red; transition: all .1s;}
+		&:focus-within{
+			.text-icon { fill: $primary; transition: all .1s; }
+		}
+	}
+	&.disabled{
+		* {color: $grey-6;}
+		border-bottom: 2px solid $grey-6;
+		.text-icon{fill: $grey-5; transition: all .1s;}
+		&:focus-within{
+			.text-icon { fill: $grey-6; transition: all .1s; }
+		}
+	}
+}
+.text-area {
+	display: flex;
+	textarea {
+		resize: none;
+		height: 110px !important;
+		padding: 0 !important;
+		margin-top: 2.4rem !important;
+	}
+	width: 100%;
+	min-width: 240px;
+	min-height: 140px;
+	padding: 0;
+	margin-bottom: 0.2rem;
+	@include border-radius(1px);
+	border-bottom: 2px solid $grey-4;
+	.text-icon { fill: $grey-1; flex-grow: 0; width: 16px; height: 16px; margin-right: 16px; }
+	&:focus-within{
+		border-bottom: 2px solid $black;
+		.text-icon{fill: $primary; transition: all .1s;}
+		label, > span { color: $primary; }
+	}
+	&.error{
+		border-bottom: 2px solid $primary;;
+		.text-icon{fill: red; transition: all .1s;}
+		&:focus-within{
+			.text-icon { fill: $primary; transition: all .1s; }
+		}
+	}
+	&.disabled{
+		* {color: $grey-6;}
+		border-bottom: 2px solid $grey-6;
+		&:focus-within{
+			.text-icon { fill: $grey-6; transition: all .1s; }
+		}
+	}
+}
+.error-text{
+	font-weight: 600;
+	color: $primary;
+	font-size: 1.2rem;
+	transition: all .1s;
+	&.hide{display: none;}
+}
+
+// Float Labels
+.has-float-label {
+	flex-grow: 1;
+	height: 56px;
+	cursor: text;
+	@include float-label-container;
+	@include float-label;
+	select {
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
+	}
+	input, select, textarea {
+		@include float-label-input;
+		width: 100%;
+		font-size: 2.0rem;
+		font-family: inherit;
+		padding-top: 1em;
+		margin-top: 6px;
+		border: 0;
+		border-radius: 0;
+		background-color: transparent;
+		@include float-label-scaled {
+		  top: 1.2em;
+		  color: $grey-2;
+		  font-size: 2.0rem;
+		}
+		&:focus {
+		  outline: none;
+		  border-color: rgba(0,0,0,.5);
+		}
+	}
+	select {
+		padding-right: 1em;
+		background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='#7F7F7F' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right .4em bottom .8em;
+		background-size: 12px 16px;
+	}
+}
 
 
 

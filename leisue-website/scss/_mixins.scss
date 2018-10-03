@@ -353,3 +353,45 @@
     -moz-box-shadow: inset $top $left $blur $spread $color;
     box-shadow: inset $top $left $blur $spread $color;
 }
+
+
+
+
+//Textbox Mixins
+@mixin float-label-container {
+  display: block;
+  position: relative;
+}
+
+@mixin float-label {
+  margin-bottom: 0;
+  label, > span {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 1;
+    transition: all .2s;
+    @content;
+  }
+}
+
+@mixin float-label-input {
+  &::placeholder {
+    opacity: .5; 
+    transition: all .2s;
+  }
+  &:placeholder-shown:not(:focus)::placeholder {
+      opacity: 0;
+  }
+}
+
+@mixin float-label-scaled {
+  &:placeholder-shown:not(:focus) + * {
+      font-size: 100%;
+      opacity: .5;
+      font-weight: 400;
+      @content;
+  }
+}

@@ -16,7 +16,7 @@
   left: 0;
   overflow: hidden;
   z-index: -50;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.7);
 }
 
 .cover_video {
