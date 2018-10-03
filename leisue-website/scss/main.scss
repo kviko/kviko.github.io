@@ -415,7 +415,6 @@ nav, .nav {
 			@include align-items(center);
 			@include flex-direction(column);
 			max-width: 860px;
-			color: $grey-2;
 			.highlight { font-weight: 700; }
 			#vismis-box{
 				margin-top: 2em;
