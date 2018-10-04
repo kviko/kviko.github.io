@@ -346,6 +346,11 @@ nav, .nav {
 			@include align-items(center);
 			.intro { 
 				margin-top: 5em;
+				h4 { 
+					@include for-size(phone-only) { width: 100% }
+					@include for-size(tablet-landscape-down) { width: 50% }
+				}
+				
 				@include for-size(tablet-landscape-down) { 
 					width: 100%; 
 					text-align: center;
@@ -367,7 +372,7 @@ nav, .nav {
 				  opacity: 0;
 				  transition-property: width, opacity;
 				  &.aos-animate {
-				    width: 58%;
+				    width: 57%;
 				    @include for-size(tablet-landscape-down) { width: 40%; }
 				    opacity: 1;
 				  }
@@ -789,7 +794,7 @@ nav, .nav {
 	min-height: auto;
 	height: 500px;
 	background-color: $grey-5;
-	@include for-size(tablet-landscape-down) { height: 420px }
+	@include for-size(large-desktop-down) { height: 420px }
 	@include for-size(phone-only) { height: 380px }
 	.wrapper {
 		position: relative;
