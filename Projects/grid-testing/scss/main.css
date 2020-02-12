@@ -1,0 +1,218 @@
+/* COLORS */
+/* BASE STYLE */
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: "Source Sans Pro", Helvetica, -apple-system, BlinkMacSystemFont, "Raleway", Roboto,Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+@media (max-width: 899px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+
+section {
+  width: 100%;
+  min-height: 100%;
+}
+
+@media (max-width: 1499px) {
+  section {
+    height: 100%;
+  }
+}
+
+section.height-auto {
+  min-height: auto;
+  height: auto;
+}
+
+*:focus {
+  outline: none;
+}
+
+h1 {
+  color: #FE8F02;
+  font-size: 60px;
+  font-weight: bold;
+  margin: 0;
+}
+
+h3 {
+  color: #74728F;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+}
+
+@media (min-width: 1800px) {
+  h3 {
+    font-size: 24px;
+  }
+}
+
+.shadow-1, #mainContainer #boxServing {
+  -webkit-box-shadow: 0 16px 20px 0 rgba(64, 107, 194, 0.1);
+  box-shadow: 0 16px 20px 0 rgba(64, 107, 194, 0.1);
+}
+
+#mainContainer {
+  display: -webkit-line-grid;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+  -ms-grid-rows: (1fr)[8];
+      grid-template-rows: repeat(8, 1fr);
+}
+
+#mainContainer #boxServing {
+  background-color: #FFF;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 3;
+  grid-column: 6 / 9;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 8;
+  grid-row: 1 / 9;
+  z-index: 1;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 1800px) {
+  #mainContainer #boxServing {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 1199px) {
+  #mainContainer #boxServing {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / 9;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  #mainContainer #boxServing {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 8;
+    grid-column: 1 / 9;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 4;
+    grid-row: 4 / 8;
+  }
+}
+
+#mainContainer #boxServing .title-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+
+#mainContainer #boxAds {
+  background-color: #000;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-column: 1 / 6;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 6;
+  grid-row: 1 / 7;
+}
+
+@media (max-width: 1199px) {
+  #mainContainer #boxAds {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 5;
+    grid-row: 1 / 6;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  #mainContainer #boxAds {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 8;
+    grid-column: 1 / 9;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1 / 4;
+  }
+}
+
+#mainContainer #boxAds .adbox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#mainContainer #boxAds .adbox iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#mainContainer #boxList {
+  background-color: #F3F6FC;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-column: 1 / 6;
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 2;
+  grid-row: 7 / 9;
+}
+
+@media (max-width: 1199px) {
+  #mainContainer #boxList {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 3;
+    grid-row: 6 / 9;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  #mainContainer #boxList {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 8;
+    grid-column: 1 / 9;
+    -ms-grid-row: 8;
+    -ms-grid-row-span: 1;
+    grid-row: 8 / 9;
+  }
+}
+/*# sourceMappingURL=main.css.map */

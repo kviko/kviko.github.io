@@ -1,0 +1,166 @@
+/* COLORS */
+/* BASE STYLE */
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: "Montserrat", Helvetica, -apple-system, BlinkMacSystemFont, "Raleway", Roboto,Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+@media (max-width: 899px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+
+section {
+  width: 100%;
+  min-height: 100%;
+}
+
+@media (max-width: 1499px) {
+  section {
+    height: 100%;
+  }
+}
+
+section.height-auto {
+  min-height: auto;
+  height: auto;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  position: relative;
+  background-color: black;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 70px;
+  border: 2px solid red;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.landing-box {
+  height: 100%;
+  -webkit-background-color: black;
+  -moz-background-color: black;
+  -o-background-color: black;
+  background-color: black;
+}
+
+#rightNav {
+  color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  width: 70px;
+  position: absolute;
+}
+
+#rightNav #logoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+}
+
+#rightNav #logoContainer img {
+  width: 60%;
+  height: 66%;
+}
+
+#rightNav #socialContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#rightNav #socialContainer .nav-text {
+  letter-spacing: 24px;
+  display: block;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  margin-bottom: 64px;
+}
+
+#rightNav .social-box {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#rightNav .social-box a img {
+  height: auto;
+  width: 24px;
+  background-color: #FFF;
+}
+
+#rightNav .social-box hr {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  width: 40px;
+  color: #7F7F7F;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,409 @@
+// CSS BREAKPOINTS
+// phone-only             max-width: 599px
+// tablet-portrait-up     min-width: 600px
+// tablet-portrait-only   min-width: 600px && max-width: 899px
+// tablet-landscape-down  max-width: 899px
+// tablet-landscape-up    min-width: 900px
+// tablet-landscape-only  min-width: 900px && max-width: 1199px
+// desktop-down           max-width: 1199px
+// desktop-up             min-width: 1200px
+// desktop-only     	  min-width: 1199px && max-width: 1499px
+// large-desktop-down     max-width: 1499px
+// large-desktop-up	      min-width: 1500px
+// large-desktop-only     min-width: 1499px && max-width: 1799px
+// xl-desktop-up		  min-width: 1800px
+
+// Ex.
+//    .my-box {
+//      padding: 10px;
+//      @include for-size(desktop-up) {
+//          padding: 20px;
+//      }
+//    }
+
+
+@mixin for-size($size) {
+    // Phone
+    @if $size == phone-only {
+      @media (max-width: 599px) { @content; }
+    }
+    // Tablet - Portrait
+    @else if $size == tablet-portrait-up {
+      @media (min-width: 600px) { @content; }
+    } @else if $size == tablet-portrait-only {
+      @media (min-width: 600px) and (max-width: 899px) { @content; }
+    }
+    // Tablet -  Landscape
+    @else if $size == tablet-landscape-down {
+      @media (max-width: 899px) { @content; }
+    } @else if $size == tablet-landscape-up {
+      @media (min-width: 900px) { @content; }
+    } @else if $size == tablet-landscape-only {
+      @media (min-width: 901px) and (max-width: 1199px) { @content; }
+    }
+    // Desktop
+    @else if $size == desktop-down {
+      @media (max-width: 1199px) { @content; }
+    } @else if $size == desktop-up {
+      @media (min-width: 1200px) { @content; }
+    } @else if $size == desktop-only {
+      @media (min-width: 1200px) and (max-width: 1499px) { @content; }
+    }
+    // Large Desktop
+    @else if $size == large-desktop-down {
+      @media (max-width: 1499px) { @content; }
+    } @else if $size == large-desktop-up {
+      @media (min-width: 1500px) { @content; }
+    } @else if $size == large-desktop-only {
+      @media (min-width: 1500px) and (max-width: 1799px) { @content; }
+    }
+    // XL Desktop
+    @else if $size == xl-desktop-up {
+      @media (min-width: 1800px) { @content; }
+    }
+    @else if $size == portrait {
+      @media screen and (orientation:portrait) {@content;}
+    }
+  }
+  
+  
+  
+  
+  
+  //  TESTING - Border
+  @mixin border($color, $size){
+    border: $size solid $color;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+  
+  // GRID
+  @mixin grid() {
+    display: -webkit-line-grid;  // OLD - iOS 6-, Safari 3.1-6, BB7
+    display: -moz-box;
+    display: -ms-flexbox;  // TWEENER - IE 10
+    display: -webkit-flex ; // NEW - Safari 6.1+. iOS 7.1+, BB10
+    display: grid;         // NEW, Spec - Firefox, Chrome, Opera
+  }
+  
+  
+  
+  
+  // FLEXBOX
+  @mixin flexbox() {
+    display: -webkit-box;  // OLD - iOS 6-, Safari 3.1-6, BB7
+    display: -moz-box;
+    display: -ms-flexbox;  // TWEENER - IE 10
+    display: -webkit-flex; // NEW - Safari 6.1+. iOS 7.1+, BB10
+    display: flex;         // NEW, Spec - Firefox, Chrome, Opera
+  }
+  @mixin flex($values) {
+    -webkit-box-flex: $values;
+    -moz-box-flex:  $values;
+    -webkit-flex:  $values;
+    -ms-flex:  $values;
+    flex:  $values;
+  }
+  @mixin order($val) {
+    -webkit-box-ordinal-group: $val;
+    -moz-box-ordinal-group: $val;
+    -ms-flex-order: $val;
+    -webkit-order: $val;
+    order: $val;
+  }
+  @mixin flex-direction($val) {
+    @if $val == 'column' {
+      -webkit-box-direction: normal;
+      -moz-box-direction: normal;
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    } @else if $val == 'column-reverse' {
+      -webkit-box-direction: reverse;
+      -moz-box-direction: reverse;
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      -webkit-flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+    } @else if $val == 'row-reverse' {
+      -webkit-box-direction: reverse;
+      -moz-box-direction: reverse;
+      -webkit-box-orient: horizontal;
+      -moz-box-orient: horizontal;
+      -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+    } @else {
+      -webkit-box-direction: normal;
+      -moz-box-direction: normal;
+      -webkit-box-orient: horizontal;
+      -moz-box-orient: horizontal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+    }
+  }
+  @mixin justify-content($val) {
+    @if $val == 'flex-end' {
+      -webkit-box-pack: end;
+      -moz-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+    } @else if $val == 'center' {
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    } @else if $val == 'space-between' {
+      -webkit-box-pack: justify;
+      -moz-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    } @else if $val == 'space-around' {
+      -webkit-box-pack: justify;
+      -moz-box-pack: justify;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+    } @else {
+      -webkit-box-pack: start;
+      -moz-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+    }
+  }
+  @mixin align-items($val) {
+    @if $val == 'flex-end' {
+       -webkit-box-align: end;
+      -moz-box-align: end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+      align-items: flex-end;
+    } @else if $val == 'flex-start' {
+      -webkit-box-align: start;
+      -moz-box-align: start;
+      -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+    } @else if $val == 'center' {
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+    } @else {
+       -webkit-box-align: $val;
+      -moz-box-align: $val;
+      -webkit-align-items: $val;
+      -ms-flex-align: $val;
+      align-items: flex-$val;
+    }
+  }
+  @mixin flex-wrap($val) {
+      -webkit-flex-wrap: $val;
+      -ms-flex-wrap: $val;
+      flex-wrap: $val;
+  }
+  @mixin align-self($val) {
+    @if $val == 'flex-start' {
+      -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+      align-self: flex-start;
+    } @else if $val == 'flex-end' {
+      -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+      align-self: flex-end;
+    } @else {
+      -webkit-align-self: $val;
+      -ms-flex-item-align: $val;
+      align-self: $val;
+    }
+  }
+  @mixin align-content($val) {
+    -webkit-align-content: $val;
+    -ms-flex-line-pack: $val;
+    align-content: $val;
+  }
+  
+  
+  
+  
+  // TRASNSITION
+  @mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+  }
+  
+  
+  
+  
+  
+  // BG SIZE
+  @mixin background-size($bgSize){
+    -webkit-background-size: $bgSize;
+    -moz-background-size: $bgSize;
+    -o-background-size: $bgSize;
+    background-size: $bgSize;
+  }
+  
+  
+  
+  
+  
+  // BG COLOR
+  @mixin background-color($bgColor){
+    -webkit-background-color: $bgColor;
+    -moz-background-color: $bgColor;
+    -o-background-color: $bgColor;
+    background-color: $bgColor;
+  }
+  
+  
+  
+  
+  
+  
+  // OPACITY
+  @mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+  }
+  
+  
+  
+  
+  
+  // TRANSFORM
+  @mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+  }
+  // TRANSFORM - Rotate
+  @mixin rotate ($deg) {
+    @include transform(rotate(#{$deg}deg));
+  }
+  // TRANSFORM - skewY
+  @mixin skewY ($deg) {
+    @include transform(skewy(#{$deg}deg));
+  }
+  
+  
+  
+  
+  
+  // GRADIENT BG Left 2 Rright
+  @mixin gradient-bg($color2, $color1){
+      background: -webkit-gradient(linear, left top, right bottom, from($color1), to($color2));
+      background: -webkit-linear-gradient(141deg, $color1, $color2);
+      background: -moz-linear-gradient(141deg, $color1, $color2);
+      background: -ms-linear-gradient(141deg, $color1, $color2);
+      background: -o-linear-gradient(141deg, $color1, $color2);
+  }
+  
+  
+  
+  
+  
+  // BORDER RADIUS
+  @mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+  }
+  
+  
+  
+  
+  
+  //  BORDER
+  @mixin border($color, $size){
+    border: $size solid $color;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+  
+  
+  
+  
+  
+  // BOX SIZING
+  @mixin border-box{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+  
+  
+  
+  
+  
+  // BOX SHADOW
+  @mixin box-shadow($value...) {
+      -webkit-box-shadow: $value;
+      -moz-box-shadow: $value;
+      box-shadow: $value;
+  }
+  @mixin box-shadow-inset($value...) {
+      -webkit-box-shadow: inset $value;
+      -moz-box-shadow: inset $value;
+      box-shadow: inset $value;
+  }
+  
+  
+  
+  
+  //Textbox Mixins
+  @mixin float-label-container {
+    display: block;
+    position: relative;
+  }
+  
+  @mixin float-label {
+    margin-bottom: 0;
+    label, > span {
+      position: absolute;
+      left: 0;
+      top: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      opacity: 1;
+      transition: all .2s;
+      @content;
+    }
+  }
+  
+  @mixin float-label-input {
+    &::placeholder {
+      opacity: .5; 
+      transition: all .2s;
+    }
+    &:placeholder-shown:not(:focus)::placeholder {
+        opacity: 0;
+    }
+  }
+  
+  @mixin float-label-scaled {
+    &:placeholder-shown:not(:focus) + * {
+        font-size: 100%;
+        opacity: .5;
+        font-weight: 400;
+        @content;
+    }
+  }

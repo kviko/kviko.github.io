@@ -1,0 +1,82 @@
+@import '_mixins';
+
+/* COLORS */
+// ------------------------------------------
+// Solid Greyscale
+$black: 			rgba(0,0,0,1);//#000; 	
+$grey-0: 			#212121; 	
+$grey-1:		    #292929;
+$grey-2: 		    #7F7F7F;
+$grey-3:		    #C2C2C2;
+$grey-4: 		    #D6D6D6;
+$grey-5:		    #F0F0F0;
+$grey-6: 		    #FAFAFA;
+$white:				#FFF;	
+// Transparent Dark 	
+$grey-1s:			rgba(0,0,0,0.84);
+$grey-2s: 			rgba(0,0,0,0.50);
+$grey-3s:			rgba(0,0,0,0.24);
+$grey-4s: 			rgba(0,0,0,0.16);
+$grey-5s:			rgba(0,0,0,0.06);
+$grey-6s: 			rgba(0,0,0,0.02);
+// Transparent Light 	
+$white-1s:			rgba(255,255,255,0.84);
+$white-2s: 			rgba(255,255,255,0.50);
+$white-3s:			rgba(255,255,255,0.24);
+$white-4s: 			rgba(255,255,255,0.16);
+$white-5s:			rgba(255,255,255,0.06);
+$white-6s: 			rgba(255,255,255,0.02);
+// Brand Colors - Leisue
+$primary: 			#ED0A28; // Spanish Red
+$primary-light: 	#F57989; // Paradise Pink
+$primary-dark:		#C20921; // Venetian Red
+$secondary:			#464547; // Outer Space
+$secondary-light:	#787779; // Sonic Silver
+$secondary-dark:	#2D2C2E; // Onyx
+$grey-leisue:		#cbcfd3;
+$kyoo-a:			#FE7401;
+$kyoo-b:			#FE8F02;
+$talkm-a:			#0066FF;
+$talkm-b:			#0054D1;
+// Sub Colors
+$green:				#28A745;	$green-light: lighten($green, 40%);		$green-dark: darken($green, 12%);
+$red:				#DC3545;	$red-light: lighten($red, 40%);			$red-dark: darken($red, 12%);
+$yellow:			#FFC107;	$yellow-light: lighten($yellow, 40%);	$yellow-dark: darken($yellow, 12%);
+$blue:				#007BFF;	$blue-light: lighten($blue, 40%);		$blue-dark: darken($blue, 12%);
+$bleen:				#17A2B8;	$bleen-light: lighten($bleen, 40%);		$bleen-dark: darken($bleen, 12%);
+
+
+
+
+/* BASE STYLE */
+// ------------------------------------------
+html, body{
+	margin: 0;
+	height: 100%;
+	font-family: "Montserrat", Helvetica, -apple-system, BlinkMacSystemFont, "Raleway", Roboto,Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+    @include border-box;
+    
+}
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html { font-size: 62.5%; }
+body{ 
+	font-size: 1.6rem; /* currently ems cause chrome bug misinterpreting rems on body element */
+	line-height: 1.4;
+	font-weight: 400;
+	@include for-size(tablet-landscape-down) {
+		font-size: 1.4rem; 
+	}
+}
+section { 
+	width: 100%; 
+	min-height: 100%; 
+	@include for-size(large-desktop-down) {
+		height: 100%; 
+	}
+	&.height-auto{
+		min-height: auto; height: auto; 
+	}
+}
+* { &:focus{ outline: none; } }

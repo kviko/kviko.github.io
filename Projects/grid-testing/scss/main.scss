@@ -1,0 +1,69 @@
+@import '_style';
+
+h1 {
+    color: $kyoo-b;	
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0;
+}
+h3 {
+    color: $dark-2;
+    font-size: 20px;
+    @include for-size(xl-desktop-up){font-size: 24px;}	
+    font-weight: 400;
+    margin: 0;
+}
+
+.shadow-1{
+    @include box-shadow(0 16px 20px 0 rgba(64,107,194,0.1));
+    // box-shadow: 0 16px 20px 0 rgba(64,107,194,0.1);
+}
+
+#mainContainer{
+    @include grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    
+    #boxServing{
+        background-color: #FFF;
+        grid-column: 6 / 9;
+        grid-row: 1 / 9; 
+        z-index: 1;
+        padding: 30px;
+        @include for-size(xl-desktop-up){padding: 40px;}
+        @include for-size(desktop-down){grid-column: 5 / 9;}
+        @include for-size(portrait){grid-column: 1 / 9; grid-row: 4 / 8; }
+        @extend .shadow-1;
+        @include flexbox;
+        
+        .title-box{
+            width: 100%;
+            @include flexbox;
+            @include align-items(center);
+            @include flex-direction(column);
+            text-align: center;
+        }
+
+    }
+    #boxAds{
+        background-color: #000;
+        grid-column: 1 / 6;
+        grid-row: 1 / 7; 
+        @include for-size(desktop-down){grid-column: 1 / 5; grid-row: 1 / 6; }
+        @include for-size(portrait){grid-column: 1 / 9; grid-row: 1 / 4; }
+        .adbox{
+            width: 100%; height: 100%;
+            // padding:56.25% 0 0 0;
+            position:relative;
+            iframe { width: 100%; height: 100%;}
+        }
+        // style="position:absolute;top:0;left:0;width:100%;height:100%;"
+    }
+    #boxList{
+        background-color: #F3F6FC;
+        grid-column: 1 / 6;
+        grid-row: 7 / 9; 
+        @include for-size(desktop-down){grid-column: 1 / 5; grid-row: 6 / 9; }
+        @include for-size(portrait){grid-column: 1 / 9; grid-row: 8 / 9; }
+    }
+}

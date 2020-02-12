@@ -1,0 +1,79 @@
+@import '_mixins';
+
+/* COLORS */
+// ------------------------------------------
+// Solid Greyscale
+$black: 			rgba(0,0,0,1);//#000; 	
+$dark-0: 			#191444; 	
+$dark-1:		    #47436A;
+$dark-2: 		    #74728F;
+$dark-3:		    #A3A1B5;
+$dark-4: 		    #D1D0DA;
+$dark-5:		    #FDFDFD;
+$dark-6: 		    #FAFAFA;
+$white:				#FFF;	
+// Transparent Dark 	
+$grey-1:			#212121;
+$grey-2: 			#313131;
+$grey-3:			#7F7F7F;
+$grey-4: 			#C2C2C2;
+$grey-5:			#D6D6D6;
+$grey-6: 			#F3F6FC;
+// Other White  	
+$light-1s:			#F9FAFD;
+$light-2s: 			#F7F9FC;
+$light-3s:			#DEE2E6;
+// Brand Colors - Leisue
+$primary: 			#ED0A28; // Spanish Red
+$primary-light: 	#F57989; // Paradise Pink
+$primary-dark:		#C20921; // Venetian Red
+$secondary:			#464547; // Outer Space
+$secondary-light:	#787779; // Sonic Silver
+$secondary-dark:	#2D2C2E; // Onyx
+$grey-leisue:		#cbcfd3;
+$kyoo-a:			#FE7401;
+$kyoo-b:			#FE8F02;
+$talkm-a:			#0066FF;
+$talkm-b:			#0054D1;
+// Sub Colors
+$green:				#28A745;	$green-light: lighten($green, 40%);		$green-dark: darken($green, 12%);
+$red:				#DC3545;	$red-light: lighten($red, 40%);			$red-dark: darken($red, 12%);
+$yellow:			#FFC107;	$yellow-light: lighten($yellow, 40%);	$yellow-dark: darken($yellow, 12%);
+$blue:				#007BFF;	$blue-light: lighten($blue, 40%);		$blue-dark: darken($blue, 12%);
+$bleen:				#17A2B8;	$bleen-light: lighten($bleen, 40%);		$bleen-dark: darken($bleen, 12%);
+
+
+
+
+/* BASE STYLE */
+// ------------------------------------------
+html, body{
+	margin: 0;
+	height: 100%;
+	font-family: "Source Sans Pro", Helvetica, -apple-system, BlinkMacSystemFont, "Raleway", Roboto,Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+    @include border-box;
+    
+}
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html { font-size: 62.5%; }
+body{ 
+	font-size: 1.6rem; /* currently ems cause chrome bug misinterpreting rems on body element */
+	line-height: 1.4;
+	font-weight: 400;
+	@include for-size(tablet-landscape-down) {
+		font-size: 1.4rem; 
+	}
+}
+section { 
+	width: 100%; 
+	min-height: 100%; 
+	@include for-size(large-desktop-down) {
+		height: 100%; 
+	}
+	&.height-auto{
+		min-height: auto; height: auto; 
+	}
+}
+* { &:focus{ outline: none; } }
