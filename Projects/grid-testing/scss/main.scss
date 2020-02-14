@@ -2,14 +2,20 @@
 
 h1 {
     color: $kyoo-b;	
-    font-size: 60px;
+    font-size: 42px;
     font-weight: bold;
     margin: 0;
+    @include for-size(large-desktop-up){font-size: 50px;}
+    @include for-size(desktop-down){font-size: 32px;}
+    @include for-size(phone-only){font-size: 24px;}
 }
 h3 {
     color: $dark-2;
-    font-size: 20px;
-    @include for-size(xl-desktop-up){font-size: 24px;}	
+    font-size: 18px;
+    @include for-size(xl-desktop-up){font-size: 24px;}
+    @include for-size(large-desktop-up){font-size: 20px;}	
+    @include for-size(desktop-down){font-size: 16px;}
+    @include for-size(phone-only){font-size: 14px;}
     font-weight: 400;
     margin: 0;
 }
@@ -27,15 +33,14 @@ h3 {
     #boxServing{
         background-color: #FFF;
         grid-column: 6 / 9;
-        grid-row: 1 / 9; 
+        grid-row: 1 / 7; 
         z-index: 1;
         padding: 30px;
+        @include for-size(desktop-down){grid-column: 1 / 5; grid-row: 1 / 6;}
         @include for-size(xl-desktop-up){padding: 40px;}
-        @include for-size(desktop-down){grid-column: 5 / 9;}
-        @include for-size(portrait){grid-column: 1 / 9; grid-row: 4 / 8; }
+        @include for-size(portrait){grid-column: 1 / 6; grid-row: 3 / 7; padding: 16px;}
         @extend .shadow-1;
         @include flexbox;
-        
         .title-box{
             width: 100%;
             @include flexbox;
@@ -43,14 +48,20 @@ h3 {
             @include flex-direction(column);
             text-align: center;
         }
-
+    }
+    #boxNotify{
+        background-color: #212121;
+        grid-column: 6 / 9;
+        grid-row: 7 / 9; 
+        @include for-size(desktop-down){grid-column: 5 / 9; grid-row: 1 / 6; }
+        @include for-size(portrait){grid-column: 1 / 9; grid-row: 7 / 9; }
     }
     #boxAds{
         background-color: #000;
         grid-column: 1 / 6;
         grid-row: 1 / 7; 
-        @include for-size(desktop-down){grid-column: 1 / 5; grid-row: 1 / 6; }
-        @include for-size(portrait){grid-column: 1 / 9; grid-row: 1 / 4; }
+        @include for-size(desktop-down){grid-column: 5 / 9; grid-row: 6 / 9; }
+        @include for-size(portrait){grid-column: 1 / 9; grid-row: 1 / 3; }
         .adbox{
             width: 100%; height: 100%;
             // padding:56.25% 0 0 0;
@@ -64,6 +75,7 @@ h3 {
         grid-column: 1 / 6;
         grid-row: 7 / 9; 
         @include for-size(desktop-down){grid-column: 1 / 5; grid-row: 6 / 9; }
-        @include for-size(portrait){grid-column: 1 / 9; grid-row: 8 / 9; }
+        @include for-size(portrait){grid-column: 6 / 9; grid-row: 3 / 7; }
     }
+    
 }
